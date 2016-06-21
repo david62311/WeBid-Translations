@@ -1,0 +1,9 @@
+Beste {SELLER_NICK},
+Dit bericht is gestuurd van {SITENAME}.
+
+{SENDER_NAME} van {SENDER_EMAIL} heeft een vraag voor u met betrekking tot uw veiling {TITEL}.
+
+Vraag:
+{SENDER_QUESTION}
+
+Veiling URL: {SITEURL}item.php?id={AID}

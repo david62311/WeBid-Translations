@@ -1,0 +1,26 @@
+Beste {C_NAME},
+Om te beginnen met de verkoop en / of het kopen op {SITENAME}, moet uw account 
+die momenteel wordt herzien, door de beheerder van onze site worden aanvaard.
+
+U ontvangt binnenkort een e-mail wanneer je account actief is.
+
+Uw informatie staat hieronder:
+
+Volledige naam: {C_NAME}
+Gebruikersnaam: {C_NICK}
+<!-- IF C_ADDRESS ne '' -->
+Adres: {C_ADDRESS}
+<!-- ENDIF -->
+<!-- IF C_CITY ne '' -->
+Stad: {C_CITY}
+<!-- ENDIF -->
+<!-- IF C_PROV ne '' -->
+Provincie: {C_PROV}
+<!-- ENDIF -->
+<!-- IF C_COUNTRY ne '' -->
+Land: {C_COUNTRY}
+<!-- ENDIF -->
+<!-- IF C_ZIP ne '' -->
+Postcode: {C_ZIP}
+<!-- ENDIF -->
+Email: {C_EMAIL}

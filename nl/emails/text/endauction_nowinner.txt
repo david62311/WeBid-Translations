@@ -1,0 +1,7 @@
+Beste {S_NAME},
+Het spijt ons, de veiling die u heeft aangemaakt op {SITENAME} is geëindigd zonder winnaar
+
+Veiling URL: {A_URL}
+Veiling Titel: {A_TITLE}
+Veiling #: {A_ID}
+Eind Datum: {A_END}

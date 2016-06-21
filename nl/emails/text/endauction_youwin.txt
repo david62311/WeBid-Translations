@@ -1,0 +1,24 @@
+Beste {C_NAME},
+
+U hebt de volgende veiling gewonnen op {SITENAME}
+
+Veiling gegevens 
+
+Titel: {A_TITLE}
+Omschrijving: {A_DESCRIPTION}
+
+Uw bod: {A_CURRENTBID} ({W_WANTED} artikelen)
+Je hebt: {W_GOT} artikelen
+Veiling Einddatum: {A_ENDS}
+URL: {A_URL}
+
+Verkopers Info
+
+{S_NICK}
+{S_EMAIL}
+Betalingsgegevens van de verkoper:
+{S_PAYMENT}
+
+
+Als u deze mail fout heeft ontvangen, beantwoord deze mail dan.
+schrijf naar {ADMINEMAIL}, of bezoek {SITENAME} op {SITE_URL}.

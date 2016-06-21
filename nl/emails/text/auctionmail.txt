@@ -1,0 +1,17 @@
+Beste {C_NAME},
+Uw item is geplaatst op {SITENAME}. Het is direct vindbaar in de zoekresultaten
+
+Hier zijn de details:
+
+Veilingtitel: {A_TITLE}
+Veilingtype: {A_TYPE}
+Veiling #: {A_ID}
+Startbod: {A_MINBID}
+Reserveringsprijs: {A_RESERVE}
+Koop directprijs: {A_BNPRICE}
+Eindtijd: {A_ENDS}
+
+{SITE_URL}item.php?id={A_ID}
+				
+Een ander item aan uw lijst toevoegen?
+{SITE_URL}select_category.php

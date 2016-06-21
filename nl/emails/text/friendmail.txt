@@ -1,0 +1,7 @@
+Beste {F_NAME},
+Jouw vriend, {S_NAME} ({S_EMAIL}), heeft je een veiling doorgestuurd van {SITENAME}
+
+Veiling title: {TITLE}
+Reactie: {S_COMMENT}
+
+Bekijk het nu: {URL}

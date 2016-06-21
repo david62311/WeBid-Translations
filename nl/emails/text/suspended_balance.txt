@@ -1,0 +1,9 @@
+Beste {NAME},
+
+Uw account op  {SITENAME}  is geschorst omdat u over uw achterstand limiet heen bent.
+
+Uw rekeningsaldo is: {BALANCE}
+
+Om uw account weer te activeren zult u uw rekeningsaldo moeten aanvullen. 
+Klik a.u.b. op de onderstaande link om naar de betaalpagina te gaan.
+{OUTSTANDING}

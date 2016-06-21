@@ -1,0 +1,10 @@
+Beste {C_NAME},
+
+Dit is de factuur voor de betaling van de commissie-kosten voor {ITEM_NAME}.
+
+Totaal te betalen: {BALANCE}
+
+Klik op de onderstaande link om naar de betaal pagina te gaan:
+{LINK}
+
+Alle activiteiten op uw pagina zullen worden opgeschort totdat dit is betaald

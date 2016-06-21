@@ -1,0 +1,11 @@
+Beste {C_NAME},
+Gefeliciteerd je hebt het volgende item gewonnen:
+
+{A_TITLE}
+Uw bod: {A_CURRENTBID}
+Eindtijd: {A_ENDS}
+
+Ga naar mijn {SITENAME} {SITE_URL}user_menu.php
+
+Verkoper's Informatie:
+{S_NICK} - {S_EMAIL}

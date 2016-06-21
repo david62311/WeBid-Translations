@@ -1,0 +1,6 @@
+Beste {REALNAME},
+Dit is de veiling die u wilde volgen.
+De volgende veiling die voldoet aan uw zoekwoord(en) is geopend: {KWORD}
+
+Veiling: {TITLE}
+Veiling URL: {URL}

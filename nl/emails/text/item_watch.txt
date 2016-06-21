@@ -1,0 +1,8 @@
+Beste {REALNAME},
+Dit is een geautomatiseerde bericht van de item volger.
+Iemand heeft een bod uitgebracht op een artikel uit je volglijst. 
+
+Veiling title: {TITLE}
+Huidige bod: {BID}
+
+Veiling link: {AUCTION_URL}

@@ -1,0 +1,8 @@
+Beste {C_NAME},
+
+Dit is een factuur voor het aanvullen van uw rekeningsaldo op onze site, {SITENAME}.
+
+Uw rekeningsaldo is: {BALANCE}
+
+Klik op de onderstaande link om naar de betaal pagina te gaan:
+{LINK}

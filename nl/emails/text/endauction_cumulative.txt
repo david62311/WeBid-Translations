@@ -1,0 +1,11 @@
+Beste {S_NAME},
+
+De volgende veilingen die u geplaatst had op {SITENAME} zijn gisteren gesloten.
+
+{REPORT}
+
+
+Er is een email gestuurd naar de winnaar(s) met uw email adres.
+
+Als u deze mail fout heeft ontvangen, beantwoord deze mail dan.
+Stuur naar {ADMINMAIL}, of bezoek {SITENAME} op {SITE_URL}.

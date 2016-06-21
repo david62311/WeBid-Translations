@@ -1,0 +1,6 @@
+Beste {NAME},
+Dit is een geautomatiseerde bericht van de item volger.
+De veiling is gesloten voor een item uit uw volg lijst.
+
+Veiling title: {TITLE}
+Veiling URL: {URL}

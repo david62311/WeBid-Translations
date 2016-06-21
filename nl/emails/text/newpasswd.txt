@@ -1,0 +1,6 @@
+Hallo {REALNAME},
+Zoals u verzocht, hebben we een nieuw wachtwoord voor uw account aangemaakt.
+
+Uw nieuwe wachtwoord: {newpass}
+
+Gebruik het om in te loggen op {SITENAME} en vergeet niet om het te veranderen in iets wat u kunt onthouden.

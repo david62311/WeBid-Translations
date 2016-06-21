@@ -1,0 +1,9 @@
+Voltooi uw {SITENAME} registratie!
+Hallo {C_NAME},
+Bedankt voor het aanmelden bij {SITENAME}, om uw registratie af te ronden moet u uw account activeren. Zodra dat is gebeurd kunt u gaan kopen en verkopen op {SITENAME}.
+
+Om uw account te activeren, klik op deze link.
+{CONFIRMURL}
+
+Als de link niet werkt:
+Stuurt u dan een bericht naar: {ADMINMAIL}

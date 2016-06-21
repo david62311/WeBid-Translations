@@ -1,0 +1,9 @@
+Gebruiker {NAME} ({NICK}),
+Eigenaar van een kopers account vraagt om omgezet te worden naar een verkopers account.
+
+Gebruikers details
+
+Gebruikers ID: {ID}
+Gebruikersnaam: {NAME}
+Gebruikers Nick: {NICK}
+Gebruikers E-mail: {EMAIL}

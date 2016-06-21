@@ -1,0 +1,15 @@
+Beste {S_NAME},
+Gefeliciteerd, uw item is zojuist verkocht!
+
+Hieronder staan de details.
+
+Veilingtitel: {A_TITLE}
+Verkoopprijs: {A_CURRENTBID}
+Aantal: {A_QTY}
+Eind datum: {A_ENDS}
+Veiling URL: {A_URL}
+
+Ga naar mijn {SITENAME}: {SITE_URL}user_menu.php
+
+Kopers Informatie
+{B_REPORT}
