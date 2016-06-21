@@ -1,0 +1,11 @@
+Caro {S_NAME},
+
+O seguinte leilão que você postou no {SITENAME} fechou ontem.
+
+{REPORT}
+
+
+Um email foi enviado para o vencedor com seu endereço de email.
+
+Se você recebeu esta mensagem de erro, por favor responda este email,
+escreva para {ADMINMAIL}, ou visite {SITENAME} em {SITE_URL}.

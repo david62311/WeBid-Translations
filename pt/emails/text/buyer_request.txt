@@ -1,0 +1,9 @@
+Usuário {NAME} ({NICK}),
+Dono de uma conta de comprador pediu para mudar para uma conta de vendedor.
+
+Detalhes do usuário
+
+ID do Usuário: {ID}
+Nome de Usuário: {NAME}
+Apelido do Usuário: {NICK}
+E-mail do Usuário: {EMAIL}

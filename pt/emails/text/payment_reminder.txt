@@ -1,0 +1,8 @@
+Caro {C_NAME},
+
+Esta é uma factura para limpar o saldo da conta com o nosso site, {SITENAME}.
+
+Seu saldo é: {BALANCE}
+
+Por favor clique no link abaixo para acessar a página de pagamento:
+{LINK}

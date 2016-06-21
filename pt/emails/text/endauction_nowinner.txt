@@ -1,0 +1,7 @@
+Caro {S_NAME},
+Nós lamentamos, seu leilão criado em {SITENAME} terminou sem vencedores
+
+URL do Leilão: {A_URL}
+Título do Leilão: {A_TITLE}
+Item #: {A_ID}
+Data final: {A_END}

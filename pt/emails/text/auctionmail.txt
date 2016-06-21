@@ -1,0 +1,17 @@
+Caro {C_NAME},
+Seu item foi anunciado com sucesso em {SITENAME}. O item será mostrado nos resultados de busca.
+
+Aqui estão os detalhes do anúncio:
+
+Título do leilão: {A_TITLE}
+Tipo de leilão: {A_TYPE}
+Item #: {A_ID}
+Lance Inicial: {A_MINBID}
+Preço mínimo: {A_RESERVE}
+Preço Compra Já!: {A_BNPRICE}
+Tempo final: {A_ENDS}
+
+{SITE_URL}item.php?id={A_ID}
+				
+Tem outro item para anunciar?
+{SITE_URL}select_category.php

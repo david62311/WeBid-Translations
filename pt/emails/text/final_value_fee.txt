@@ -1,0 +1,10 @@
+Caro {C_NAME},
+
+Esta é uma fatura para o pagamento das taxas de compra do {ITEM_NAME}.
+
+Total a pagar: {BALANCE}
+
+Por favor clique no link abaixo para acessar a página de pagamento:
+{LINK}
+
+Toda atividade no site ficará em suspensão até que isto seja pago

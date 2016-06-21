@@ -1,0 +1,8 @@
+Caro {REALNAME},
+Este é seu retorno automático do Seu Assista Item.
+Alguém fez um lance em um item que está em sua lista de itens assistidos.
+
+Título do Leilão: {TITLE}
+Lance Corrente: {BID}
+
+URL do Leilão: {AUCTION_URL}

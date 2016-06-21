@@ -1,0 +1,8 @@
+Caro {C_NAME},
+Seu lance de {C_BID} não é mais o lance principal nos seguintes:
+
+{A_TITLE}
+Preço Corrente: {N_BID}
+Data final: {A_ENDS}
+
+Vá para meu {SITENAME} {SITE_URL}user_menu.php

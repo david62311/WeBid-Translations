@@ -1,0 +1,6 @@
+Caro {NAME},
+Este é seu retorno automático do Seu Item Assistido.
+O leilão que estava em sua lista Item Assistidos fechou.
+
+Título do Leilão: {TITLE}
+URL do Leilão: {URL}

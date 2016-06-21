@@ -1,0 +1,6 @@
+Oi {REALNAME},
+Como você requisitou, nós criamos uma nova senha para sua conta.
+
+Sua nova senha: {NEWPASS}
+
+Use-a para logar em {SITENAME} e lembre-se de alterá-la para algo que você possa se lembrar.

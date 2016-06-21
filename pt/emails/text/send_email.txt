@@ -1,0 +1,9 @@
+Caro {SELLER_NICK},
+Esta mensagem foi enviada de {SITENAME}.
+
+{SENDER_NAME} como {SENDER_EMAIL} há uma pergunta para você a respeito do seu leilão  {TITLE}.
+
+Pergunta:
+{SENDER_QUESTION}
+
+URL do Leilão: {SITEURL}item.php?id={AID}

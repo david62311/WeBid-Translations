@@ -1,0 +1,11 @@
+Caro {W_NAME},
+Parabéns, você ganhou o item seguinte:
+
+{A_TITLE}
+Seu lance: {A_CURRENTBID}
+Tempo final: {A_ENDS}
+
+Vá para meu {SITENAME} {SITE_URL}user_menu.php
+
+Informação do Vendedor:
+{S_NICK} - {S_EMAIL}

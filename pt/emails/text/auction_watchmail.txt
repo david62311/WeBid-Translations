@@ -1,0 +1,6 @@
+Caro {REALNAME},
+Este é o seu assistir leilão que pediu.
+O leilão seguinte tem correspondência aberta com sua(s) palavra(s) chave(s): {KWORD}
+
+Leilão: {TITLE}
+URL do Leilão: {URL}

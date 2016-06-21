@@ -1,0 +1,24 @@
+Caro {W_NAME},
+
+Você venceu o leilão seguinte em {SITENAME}
+
+Dados do leilão
+
+Título: {A_TITLE}
+Descrição: {A_DESCRIPTION}
+
+Seu lance: {A_CURRENTBID} ({W_WANTED} items)
+Você conseguiu: {W_GOT} items
+Data Final do Leilão: {A_ENDS}
+URL: {A_URL}
+
+Info dos Vendedores
+
+{S_NICK}
+{S_EMAIL}
+Detalhes do pagamento do vendedor:
+{S_PAYMENT}
+
+
+Se você recebeu esta mensagem de erro, por favor responda para este email,
+escreva para {ADMINEMAIL}, ou visite {SITENAME} em {SITE_URL}.

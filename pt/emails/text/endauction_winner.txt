@@ -1,0 +1,15 @@
+Caro {S_NAME},
+Parabéns, seu item foi vendido!
+
+Abaixo estão os detalhes.
+
+Título do leilão: {A_TITLE}
+Preço da venda: {A_CURRENTBID}
+Quantidade: {A_QTY}
+Data final: {A_ENDS}
+URL do Leilão: {A_URL}
+
+Vá para meu {SITENAME}: {SITE_URL}user_menu.php
+
+Informação do Comprador
+{B_REPORT}

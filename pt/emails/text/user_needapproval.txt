@@ -1,0 +1,26 @@
+Caro {C_NAME},
+Em ordem para começar a vender e/ou comprar em {SITENAME}, sua conta deve ser 
+aceita por nosso administrador do site que está atualmente sob revisão.
+
+Você receberá um pequeno e-mail quando sua conta for ativada.
+
+Sua informação está abaixo:
+
+Nome completo: {C_NAME}
+Nome de usuário: {C_NICK}
+<!-- IF C_ADDRESS ne '' -->
+Endereço: {C_ADDRESS}
+<!-- ENDIF -->
+<!-- IF C_CITY ne '' -->
+Cidade: {C_CITY}
+<!-- ENDIF -->
+<!-- IF C_PROV ne '' -->
+Estado: {C_PROV}
+<!-- ENDIF -->
+<!-- IF C_COUNTRY ne '' -->
+País: {C_COUNTRY}
+<!-- ENDIF -->
+<!-- IF C_ZIP ne '' -->
+CEP: {C_ZIP}
+<!-- ENDIF -->
+Email: {C_EMAIL}

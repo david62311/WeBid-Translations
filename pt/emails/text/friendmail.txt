@@ -1,0 +1,7 @@
+Caro {F_NAME},
+Seu amigo, {S_NAME} ({S_EMAIL}), enviou-lhe um leilão de {SITENAME}
+
+Título do Leilão: {TITLE}
+Comentários: {S_COMMENT}
+
+Confira: {URL}

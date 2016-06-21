@@ -1,0 +1,9 @@
+Caro {NAME},
+
+Sua conta em {SITENAME} foi suspensa porque você excedeu o limite máximo de débito permitido.
+
+Seu saldo é: {BALANCE}
+
+Em ordem para reativar sua conta, você precisa limpar seu saldo de conta. 
+Por favor visite o link abaixo apara acessar a página de pagamento.
+{OUTSTANDING}

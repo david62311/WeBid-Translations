@@ -1,0 +1,9 @@
+Complete seu registro em {SITENAME}!
+Olá {C_NAME},
+Obrigado por se cadastrar em {SITENAME}, para completar seu cadastro, você deve ativar sua conta. Após a ativação você será capaz de comprar e vender em {SITENAME}
+
+Para ativar sua conta, clique no link abaixo:
+{CONFIRMURL}
+
+Se o link não funciona:
+Por favor envie um email para {ADMINMAIL}
