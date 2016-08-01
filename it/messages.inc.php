@@ -1,6 +1,6 @@
 <?php
 /***************************************************************************
- *   copyright				: (C) 2008 - 2014 WeBid
+ *   copyright				: (C) 2008 - 2016 WeBid
  *   site					: http://www.webidsupport.com/
  ***************************************************************************/
 
@@ -16,7 +16,7 @@ if (!defined('InWeBid')) exit();
 
 // CHARSET ENCODING
 // Change the charset according to the language used in this file.
-$CHARSET = "ISO-8859-1";
+$CHARSET = "UTF-8";
 // DOCUMENT DIRECTION
 // Change the $DOCDIR variable below according to the document direction needed
 // by the language you are using.
@@ -106,8 +106,7 @@ $ERR_100 = "L'utente non esiste";
 $ERR_101 = "Password errata";
 $ERR_102 = "L'utente non esiste";
 $ERR_103 = "Non puoi votarti";
-$ERR_104 = "
-Tutti i campi richiesti";
+$ERR_104 = "Tutti i campi richiesti";
 $ERR_105 = "Nome utente non esistente";
 $ERR_106 = "<br><br>nessun utente specificato";
 $ERR_107 = "Il nome utente è troppo corto";
@@ -440,6 +439,7 @@ $MSG['272'] = "L'articolo che stai controllando";
 $MSG['273'] = "Inserisci l'articolo in Homepage (Vetrina)";
 $MSG['274'] = "Evidenzia";
 $MSG['275'] = "Vai!";
+$MSG['275a'] = "Login";
 $MSG['276'] = "Categorie principali";
 $MSG['277'] = "Tutti gli annunci";
 $MSG['278'] = "Ultime Aste";
@@ -1031,7 +1031,7 @@ $MSG['1037'] = 'COMPRATORE';
 $MSG['1038'] = 'SPEDISCI A';
 $MSG['1039'] = 'Dati Fattura';
 $MSG['1040'] = 'Dettagli Ordine';
-$MSG['1041'] = 'Fattura N.';
+$MSG['1041'] = 'Fattura N';
 $MSG['1042'] = 'Ordine ID:';
 $MSG['1043'] = 'Data fattura:';
 $MSG['1044'] = 'Prodotto';
@@ -1053,7 +1053,7 @@ $MSG['1059'] = 'Lista  Fatture';
 $MSG['1060'] = 'Fattura non valida';
 
 // admin general
-$MSG['1061'] = 'Note';
+$MSG['1061'] = 'Nota';
 
 // admin help page
 $MSG['1062'] = 'Richiedi Supporto';
@@ -1104,11 +1104,76 @@ $MSG['1100'] = 'Non è possibile eliminare l\'account, tu sei attualmente loggat
 $MSG['1101'] = 'Account admin cancellato';
 
 // sell.php tax
-$MSG['1102'] = 'Carica Tasse';
-$MSG['1103'] = 'Includi le tase nel prezzo finale di vendita';
+$MSG['1102'] = 'Tassa di carica';
+$MSG['1103'] = 'Includere le tasse nel prezzo finale vendita';
+$MSG['1104'] = 'Aggiungere al pareggio';
+$MSG['1105'] = 'Selezionare le immagini che si desidera eliminare <strong> (Questo non può essere annullata) </ strong>';
+$MSG['1106'] = 'slittamento di stampa di imballaggio';
+$MSG['1107'] = 'Articolo non è stato spedito';
+$MSG['1108'] = 'Imposta come Ricevuto';
+$MSG['1109'] = 'Oggetto ricevuto';
+$MSG['1110'] = 'Politica Cookies';
+$MSG['1111'] = "Attivare la politica cookie Pagina?";
+$MSG['1112'] = "Attivare questa opzione se si desidera un collegamento politica cookie appaia nel footer delle pagine.";
+$MSG['1113'] = "I cookie contenuto politico <br> (HTML consentito)";
+$MSG['1114'] = "Politica Cookies Pagina";
+$MSG['1115'] = "Impostazioni Privacy Cookies Aggiornato";
+$MSG['1116'] = 'Imposta come Spedito';
+$MSG['1117'] = 'Spedito';
 
-$MSG['1104'] = 'Aggiungi al conto';
-$MSG['1105'] = 'Selezionare le immagini che si desidera eliminare <strong> (Questo non può essere annullato) </strong>';
+// email settings
+$MSG['1118'] = 'Impostazioni email';
+$MSG['1119'] = 'protocollo di posta:';
+$MSG['1120'] = 'Webid posta Parametri:';
+$MSG['1121'] = '*Quando si utilizza \'Webid Mail\', i parametri di posta elettronica possono essere aggiunti qui (e.g. "-femail@yourwebid.com")';
+$MSG['1122'] = 'SMTP Host:';
+$MSG['1123'] = '*Per gli account Gmail. Impostare il sistema di crittografia utilizza un prefisso di [<b>ssl://</b>] o [<b>tls://</b>] Esempi:<br>[ ssl://smtp.googlemail.com ], [ tls://smtp.googlemail.com ]';
+$MSG['1124'] = 'SMTP Nome utente:';
+$MSG['1125'] = 'SMTP parola d ordine:';
+$MSG['1126'] = 'SMTP porto:';
+$MSG['1127'] = 'SMTP Sicurezza:';
+$MSG['1128'] = 'SMTP Autenticazione';
+$MSG['1129'] = 'Ulteriori Admin Mail:';
+$MSG['1130'] = 'account di posta elettronica aggiuntive che si desidera ricevere email relativa amministrazione, oltre a l indirizzo del sito e-mail principale del %s. (separato da virgola)';
+$MSG['1131'] = 'Impostazioni e-mail';
+$MSG['1132'] = 'Si prega di inserire le impostazioni SMTP mancanti o errati';
+$MSG['1133'] = "SMTP Opzioni specifiche:";
+
+// modal and js
+$MSG['1134'] = "Test di email e di risposta";
+$MSG['1135'] = "Inserisci un messaggio per il messaggio di prova.";
+$MSG['1136'] = "Send Test Email";
+$MSG['1137'] = "email di prova";
+$MSG['1138'] = "email di prova da Admin";
+$MSG['1139'] = "Admin";
+$MSG['1140'] = "Ho finito le prove";
+$MSG['1141'] = 'Usato <b> solo </ b> per la posta SMTP';
+
+// fee gateway
+$MSG['1142'] = "Prima di poter configurare alcuna commissione è necessario impostare almeno un account in cui le tasse possono essere pagate a, per farlo è sufficiente aggiungere i dati di pagamento nelle corrispondenti caselle sottostanti";
+$MSG['1143'] = "Qui si imposta il quale si desidera gateway di pagamento per consentire agli utenti di utilizzare";
+$MSG['1144'] = "Prima di poter impostare le tasse è necessario di istituire almeno un metodo di pagamento. È possibile farlo tramite <a href=\"fee_gateways.php\">payment gateways</a>.";
+
+// yourauctions pages
+$MSG['1145'] = "<p>Hai cancellato con successo %s auction(s)</p>";
+$MSG['1146'] = "<p>Hai rimesso in vendita con successo %s auction(s)</p>";
+$MSG['1147'] = "<p>Hai venduto con successo %s auction(s)</p>";
+$MSG['1148'] = "<p>Una carica di %s è stato fatto al tuo account</p>";
+$MSG['1149'] = "<p>Hai chiuso con successo %s auction(s)</p>";
+$MSG['1150'] = "<p>Hai iniziato con successo %s auction(s)</p>";
+$MSG['edit_disabled'] = "Modifica disabili, Item ha offerte";
+$MSG['delete_auction_disabled'] = "Eliminare disabili, Item ha offerte";
+$MSG['no_bids'] = "Nessuna offerta";
+$MSG['click_to_edit_auction'] = "Fare clic per modificare questa asta";
+
+// sell item page
+$MSG['1151'] = "tassa Asta";
+$MSG['1152'] = "Gratuito";
+$MSG['1153'] = 'Stampa fattura';
+
+//Sandbox messages for the AdminCP
+$MSG['1154'] = 'È possibile attivare il gateway di pagamento sandbox per testare i gateway di pagamento, ma assicurarsi disattivare la modalità sandbox prima di fare il vostro sito in diretta';
+$MSG['1155'] = "Payment Gateway sandbox";
 
 $MSG['5003'] = "Settaggi Sito";
 $MSG['5004'] = "Settaggio Valute";
@@ -1647,7 +1712,9 @@ $MSG['26_0005'] = "Tema di default aggiornato";
 $MSG['30_0029'] = "È possibile impostare il numero di categorie che si desidera vedere nella colonna sinistra della home page ";
 $MSG['30_0030'] = "Categorie da vedere: ";
 $MSG['30_0031'] = "Pulisci la Cache";
+$MSG['30_0031a'] = "Cancella cache Immagine";
 $MSG['30_0032'] = "Eliminare tutti i file cache dei template, è necessario eseguire questa operazione ogni volta che si modifica un file di grafica (template) ";
+$MSG['30_0032a'] = "Eliminare tutti i file della cache immagine, questo può aiutare se ci sono alcune immagini non mostrano sul sito";
 $MSG['30_0033'] = "Cache pulita";
 $MSG['30_0049'] = "Settaggi Newsletter aggiornati";
 $MSG['30_0053'] = "<p>Alcuni servizi gratuiti di posta elettronica sono state bandite da questo sito. Si prega di non inserire indirizzi di posta elettronica appartenenti ai seguenti domini: </p>";
@@ -1662,7 +1729,7 @@ $MSG['30_0069'] = "Sei il venditore: modifica l'asta";
 $MSG['30_0070'] = "Cerca solo in questa categoria";
 $MSG['30_0080'] = "Opzioni di pagamento";
 $MSG['30_0081'] = "Visti ";
-$MSG['30_0084'] = "You can decide to allow users to see each others E-Mail addresses or to hide them and all communication must be done via PMs";
+$MSG['30_0084'] = "È possibile decidere di consentire agli utenti di vedere ogni altri indirizzi di posta elettronica o per nasconderli e tutte le comunicazioni devono essere effettuate tramite il PMs";
 $MSG['30_0085'] = "Nascondi E-Mails degli utenti";
 $MSG['30_0086'] = "Indirizzo: ";
 $MSG['30_0087'] = "Sei sicuro di voler processare l'asta selezionata?";
@@ -1670,6 +1737,7 @@ $MSG['30_0098'] = "&nbsp; = Superata";
 $MSG['30_0100'] = "<b>COMPRA ADESSO!</b> vendite";
 $MSG['30_0101'] = "<b>Solo COMPRA ADESSO</b> vendite";
 $MSG['30_0102'] = "Seleziona/deseleziona tutto";
+$MSG['30_0110'] = "Spedizione";
 $MSG['30_0176'] = "Vedi Vincitori";
 $MSG['30_0177'] = "Asta terminata";
 $MSG['30_0178'] = "&nbsp;&nbsp; Nessun vincitore trovato per questa asta";
@@ -1681,12 +1749,129 @@ $MSG['30_0209'] = "Incontra il venditore";
 $MSG['30_0210'] = "* Quando gli oggetti relativi a tali parole chiave saranno inseriti, ti verrà comunicato via e-mail";
 $MSG['30_0211'] = "Stai usando una versione datata puo scaricare la versione aggiornata da <a href='http://sourceforge.net/project/showfiles.php?group_id=181393'>QUI</a>";
 $MSG['30_0212'] = "COMPLIMENTI! Stai usando l'ultima versione";
-$MSG['30_0213'] = "No feedback needs leaving";
+$MSG['30_0213'] = "Nessun feedback necessita di lasciare";
 $MSG['30_0214'] = "WeBid Version";
-$MSG['30_0110'] = "Spedizione";
+$MSG['30_0215'] = "Caricamento logo";
 $MSG['350_1004'] = "Quantit&agrave;";
 $MSG['350_1008'] = "Spese aggiuntive";
 $MSG['350_1009'] = "Spese di spedizione aggiuntive";
 $MSG['RPT_22'] = 'ID Utente'; 
 $MSG['RPT_23'] = '(lasciare in bianco per tutti)';
+
+$MSG['email_settings_updated'] = 'Le impostazioni di posta elettronica aggiornato';
+
+$MSG['NAY_01'] = 'Presenti elementi';
+$MSG['NAY_02'] = 'Tutti gli elementi';
+$MSG['NAY_03'] = "Sito Tema";
+$MSG['NAY_04'] = "Admin Theme";
+
+$MSG['AUCTIONS_401'] = "offerta";
+$MSG['AUCTIONS_402'] = "Offerte";
+$MSG['AUCTIONS_404'] = "venduti";
+$MSG['AUCTIONS_405'] = "offerta vincente";
+$MSG['AUCTIONS_406'] = "vincitori";
+
+$MSG['BUY_NOW_ONLY_TPL_0100'] = "Chiuso di recente relazione di aste";
+
+$MSG['auction_has_been_reported'] = "questa asta è stato segnalato";
+$MSG['item_report_captcha_type'] = "Captcha tipo sulla voce Pagina report";
+$MSG['report_this_item'] = "Segnala questo oggetto";
+$MSG['view_reported_auctions'] = "Visualizza aste riportati";
+$MSG['report_item'] = "Relazione elemento";
+$MSG['reason_for_report'] = "ragione per Report";
+$MSG['report_reason_select'] = "Selezionare un motivo";
+$MSG['report_reason_copy'] = "Copia dei listing";
+$MSG['report_reason_counterfeit'] = "contraffazioni e violazioni dei diritti d'autore";
+$MSG['report_reason_prohibited'] = "vietato (oggetti vietati)";
+$MSG['report_reason_terms_and_conditions'] = "elencando le violazioni dei criteri";
+$MSG['report_reason_stolen'] = "rubato";
+
+$MSG['multilingual_support_settings_updated'] = 'Multilingual Support Settings updated';
+
+$MSG['communative_report_winner_yes'] = 'È stato inviato un messaggio di posta elettronica a qualsiasi vincitore(s) con il vostro indirizzo di posta elettronica.';
+$MSG['communative_report_winner_no'] = 'Siamo spiacenti ma non vi e nessun asta winner(s) questo tempo.';
+
+// usergroups.php
+$MSG['cannot_delete_default_user_groups'] = 'Gruppi utente predefiniti (venditori &amp; gli acquirenti) non può es';
+$MSG['user_group_deleted'] = 'Utente gruppo eliminato';
+$MSG['user_group_name_empty_update'] = 'Il nome gruppo non può essere vuoto. Gruppo di utenti non è stato aggiornato';
+$MSG['user_group_name_empty_new'] = 'Il nome gruppo non può essere vuoto. Il nuovo gruppo di utenti non è stata creata';
+$MSG['text_unknown'] = 'Sconosciuto';
+$MSG['empty_line'] = '-----';
+$MSG['error_no_user_group'] = 'Non è stato assegnato alcun gruppi utente';
+$MSG['error_no_user_group_id'] = 'È stato assegnato a un ID di gruppo che non esistono più';
+$MSG['text_update_users_group'] = '[Si prega di visualizzare e aggiornare ogni dettagli utente]';
+$MSG['warning'] = 'Avvertenza';
+
+$MSG['bidding_visable_to_guest'] = 'Acquista ora visibili agli ospiti';
+$MSG['bidding_visable_to_guest_explain'] = 'Ospite può vedere l offerta ora/opzione Compralo subito durante la visualizzazione di un asta, questa dovrebbe essere disattivata se si prevede di eseguire un singolo venditore sito';
+$MSG['email_admin_on_signup'] = 'e-mail admin su signup';
+$MSG['email_admin_on_signup_explain'] = 'Admin riceve un messaggio di posta elettronica ogni volta che un nuovo utente si registra';
+$MSG['user_request_seller_permission'] = 'Gli utenti possono richiedere di diventare venditori';
+$MSG['user_request_seller_permission_explain']= 'Gli utenti che non hanno il permesso di vendere gli oggetti possono richiedere di ottenere il permesso';
+$MSG['spam_blocked_email_enabled'] = 'Attiva blocco domini di posta elettronica';
+$MSG['spam_blocked_email_domains'] = 'Deny registrazione da messaggi di posta elettronica usa e getta';
+$MSG['spam_blocked_email_domains_explain'] = 'mettere ogni dominio su una nuova linea';
+$MSG['spam_blocked_email_domains_register_error'] = 'l indirizzo e-mail che hai inserito è stata inserita nella lista nera';
+
+$MSG['wordfilter_banned_username'] = 'Si prega di selezionare un nome utente diverso come il nostro filtro parola non permetterà a questo nome per essere utilizzato';
+
+$MSG['custom_end_time'] = 'Set custom ora fine';
+$MSG['or_custom_end_time'] = 'o impostare un custom ora fine';
+$MSG['ending_date'] = 'Data finale';
+
+$MSG['allow_custom_end_date_explain'] = "Gli utenti possono impostare un custom <b>fine</b> data per le aste";
+$MSG['allow_custom_end_date'] = "Consentire Custom Data di fine??";
+
+$MSG['payment_name'] = 'Nome';
+$MSG['clean_payment_name'] = 'Pulire nome <small>(tutte minuscole senza spazi o caratteri speciali)</small>';
+
+$MSG['all_user_groups'] = 'Tutti i gruppi di utenti';
+$MSG['login_required_text'] = "Login required";
+$MSG['end_date'] = 'Richiesta di accesso';
+$MSG['delete'] = 'Elimina';
+
+$MSG['all_error_messages'] = 'Tutti gli errori';
+$MSG['unique_error_messages'] = 'Errori di univoco';
+
+$MSG['google_analytics'] = "Google Analytics";
+$MSG['google_analytics_updated'] = "Google Analytics impostazioni aggiornate";
+$MSG['google_analytics_tracking_code'] = "Google Analytics Tracking Code";
+$MSG['google_analytics_tracking_code_hint'] = "Copiare e incollare il codice di monitoraggio di Google Analytics qui. È necessario includere la apertura e chiusura &lt;script&gt;&lt;/script&gt; tags.";
+
+$MSG['any_country'] = 'Qualsiasi paese';
+
+$MSG['new_currency'] = 'Aggiungi nuova moneta';
+$MSG['currency_name'] = "Il nome della valuta";
+$MSG['curreny_symbol'] = "Simbolo di valuta";
+$MSG['curreny_country_explain'] = "Esempio: <b>United States</b><br>Deve compilare in tutte e 3 le textboxs per aggiungere una nuova moneta.";
+$MSG['curreny_name_explain'] = "Esempio: <b>U.S. Dollar</b>";
+$MSG['curreny_symbol_explain'] = "Esempio: <b>USD</b>";
+
+$MSG['prune_unactivated_users'] = "Potare gli utenti non attivato";
+$MSG['prune_unactivated_users_explain'] = "Elimina automaticamente disattivato gli account utente.";
+
+$MSG['prune_unactivated_users_days'] = "Numero di giorni prima di eliminare gli account non attivato";
+$MSG['prune_unactivated_users_days_explain'] = "Numero di giorni prima di eliminare gli account non attivato.";
+
+$MSG['moderation_settings'] = 'Le impostazioni di moderazione';
+$MSG['moderation_disabled'] = 'Disabilitato';
+$MSG['moderation_pre_moderation'] = 'Pre-moderazione';
+$MSG['moderation_post_moderation'] = 'Post-moderazione';
+
+$MSG['auction_moderation'] = 'La moderazione di aste';
+$MSG['new_auction_moderation'] = 'Nuove aste moderazione';
+
+$MSG['moderation_settings_updated'] = "Moderazione impostazioni aggiornate";
+
+$MSG['moderation'] = 'Moderazione';
+$MSG['moderate_auctions'] = 'Aste moderato';
+$MSG['moderation_queue'] = 'Moderation Queue';
+
+$MSG['moderator_dismiss'] = 'Chiudi';
+$MSG['remove_auction_from_moderation'] = "Rimuovere l asta dalla moderazione";
+$MSG['remove_auction_from_moderation_explain'] = "Sei sicuro di voler rimuovere questa asta dalla coda di moderazione?<br>Questa azione non riattivare l asta.";
+
+$MSG['auction_awaiting_approval'] = "L asta è in attesa di approvazione";
+
 ?>
