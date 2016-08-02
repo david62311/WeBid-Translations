@@ -1,6 +1,6 @@
 <?php
 /***************************************************************************
- *   copyright				: (C) 2008 - 2014 WeBid
+ *   copyright				: (C) 2008 - 2016 WeBid
  *   site					: http://www.webidsupport.com/
  ***************************************************************************/
 
@@ -22,7 +22,7 @@ $CHARSET = "UTF-8";
 // by the language you are using.
 // Possible values are:
 // - ltr (default) - means left-to-right document (almost any language)
-// - rtl - means right-to-left document (i.e. arabic, hebrew, ect).
+// - rtl - means right-to-left document (i.e. arabic, hebrew, etc).
 $DOCDIR = "ltr";
 // Error messages and user interface messages are below. Translate them taking care of leaving
 // The PHP and HTML tags unchanged.
@@ -1442,11 +1442,11 @@ $MSG['2_0021'] = "Escludi questo indirizzo IP: ";
 $MSG['2_0024'] = "(Indirizzo IP completo - esempio: 185.39.51.63)";
 $MSG['2_0025'] = "Inserito manualmente";
 $MSG['2_0026'] = "Siamo spiacenti ma, per uno o più motivi, è stato negato l'accesso
-⇥ ⇥ ⇥ ⇥questo sito.<br>
-⇥ ⇥ ⇥ ⇥Se tu delle aste attive abbiamo provveduto alla cancellazione delle tue offerte
-⇥ ⇥ ⇥ ⇥Rimosso la tua lista(e) dal nostro database.
-⇥ ⇥ ⇥ ⇥<br><br>
-⇥ ⇥ ⇥ ⇥grazie e buona giornata";
+       questo sito.<br>
+       Se tu delle aste attive abbiamo provveduto alla cancellazione delle tue offerte
+       Rimosso la tua lista(e) dal nostro database.
+       <br><br>
+       grazie e buona giornata";
 $MSG['2_0027'] = "il tuo IP è stato bannato";
 $MSG['2_0032'] = "Impostazioni Estensione Aste";
 $MSG['2_0034'] = "Abiliti L'estensione automatica dell'Asta?";
@@ -1455,33 +1455,33 @@ $MSG['2_0036'] = " secondi se qualcuno offre alla fine dell'asta ";
 $MSG['2_0037'] = " secondi";
 $MSG['2_0038'] = "Inserisci un valore numerico valido";
 $MSG['2_0039'] = "Aste auto ti dà la possibilità di estendere automaticamente <b>X</ b>secondi aste finiscono,
-⇥ ⇥ ⇥ ⇥ se qualcuno offerte negli ultimi <b>Y</ b> secondi di durata dell'asta. <br>";
+         se qualcuno offerte negli ultimi <b>Y</ b> secondi di durata dell'asta. <br>";
 $MSG['2__0001'] = "Scegli la lingua";
 $MSG['2__0002'] = "Supporto Multi lingue";
 $MSG['2__0003'] = "<br> La lingua di default è l'inglese. <br>
-⇥ ⇥ ⇥ ⇥ Se si desidera attivare il supporto multilingue o modificare la lingua predefinita è necessario seguire i seguenti passi:
-⇥ ⇥ ⇥ ⇥ <ul>
-⇥ ⇥ ⇥ ⇥ <li> Se si desidera aggiungere una nuova lingua fare un duplicato del linguaggio / EN e il nome con il
-⇥ ⇥ ⇥ ⇥ nome appropriato: ad esempio se si sta traducendo Francese sarà necessario denominare la directory FR
-⇥ ⇥ ⇥ ⇥ <br>
-⇥ ⇥ ⇥ ⇥ La prima cosa è definire i caratteri di codifica del linguaggio richiede nella parte superiore del file di messaggi.
-⇥ ⇥ ⇥ ⇥ La variabile è necessario modificare è <i> \ $ charset </i>. Codifica UTF-8 dovrebbe funzionare con quasi tutte le lingue. <br>
-⇥ ⇥ ⇥ ⇥ Poi si dovrà definire la direzione di lettura del documento. La variabile da modificare è <i> \ $ docdir </i>
-⇥ ⇥ ⇥ ⇥ e può avere due possibili valori:
-⇥ ⇥ ⇥ ⇥ <ul>
-⇥ ⇥ ⇥ ⇥ <li> <b> ltr </b> (da sinistra a destra): questo è il default e significa che il testo deve essere letto da sinistra a destra 
-⇥ ⇥ ⇥ ⇥ <li> <b> rtl </b> (da destra a sinistra): significa che il testo deve essere letto da destra verso sinistra (cioè arabo, ebraico, ecc)
-⇥ ⇥ ⇥ ⇥ </ul>
-⇥ ⇥ ⇥ ⇥ Una volta modificato <i> \ $ charset </i> e <i> \ $ docdir </i> in base alla lingua che si sta traducendo in,
-⇥ ⇥ ⇥ ⇥ si dovrà tradurre tutti i messaggi di errore e di interfaccia utente contenuti nel file di messaggi.
-⇥ ⇥ ⇥ ⇥
-⇥ ⇥ ⇥ ⇥ <li> Sarà quindi necessario il flag (s) GIF per le lingue che si intende utilizzare, nella directory inc / flags.
-⇥ ⇥ ⇥ ⇥ Scopri la bandiera (s) è necessario e cambiare il nome (s) file da XX.gif, dove XX è il codice della lingua per la lingua del paese. 
-⇥ ⇥ ⇥ ⇥ <br> Copiare il file rinominato bandiera (s) nella directory / / flags inc
-⇥ ⇥ ⇥ ⇥ <br> <b> Nota: </b> per ogni traduzione, è necessario il file XX.gif corrispondente inc / bandiere /
-⇥ ⇥ ⇥ ⇥ <li> Selezionare la lingua predefinita di seguito. Tutte le altre lingue disponibili saranno disponibili nella home page (le bandiere corrispondenti verranno visualizzate). 
-⇥ ⇥ ⇥ ⇥ </ul>
-⇥ ⇥ ⇥ ⇥";
+         Se si desidera attivare il supporto multilingue o modificare la lingua predefinita è necessario seguire i seguenti passi:
+         <ul>
+         <li> Se si desidera aggiungere una nuova lingua fare un duplicato del linguaggio / EN e il nome con il
+         nome appropriato: ad esempio se si sta traducendo Francese sarà necessario denominare la directory FR
+         <br>
+         La prima cosa è definire i caratteri di codifica del linguaggio richiede nella parte superiore del file di messaggi.
+         La variabile è necessario modificare è <i> \ $ charset </i>. Codifica UTF-8 dovrebbe funzionare con quasi tutte le lingue. <br>
+         Poi si dovrà definire la direzione di lettura del documento. La variabile da modificare è <i> \ $ docdir </i>
+         e può avere due possibili valori:
+         <ul>
+         <li> <b> ltr </b> (da sinistra a destra): questo è il default e significa che il testo deve essere letto da sinistra a destra 
+         <li> <b> rtl </b> (da destra a sinistra): significa che il testo deve essere letto da destra verso sinistra (cioè arabo, ebraico, ecc)
+         </ul>
+         Una volta modificato <i> \ $ charset </i> e <i> \ $ docdir </i> in base alla lingua che si sta traducendo in,
+         si dovrà tradurre tutti i messaggi di errore e di interfaccia utente contenuti nel file di messaggi.
+       
+         <li> Sarà quindi necessario il flag (s) GIF per le lingue che si intende utilizzare, nella directory inc / flags.
+         Scopri la bandiera (s) è necessario e cambiare il nome (s) file da XX.gif, dove XX è il codice della lingua per la lingua del paese. 
+         <br> Copiare il file rinominato bandiera (s) nella directory / / flags inc
+         <br> <b> Nota: </b> per ogni traduzione, è necessario il file XX.gif corrispondente inc / bandiere /
+         <li> Selezionare la lingua predefinita di seguito. Tutte le altre lingue disponibili saranno disponibili nella home page (le bandiere corrispondenti verranno visualizzate). 
+         </ul>
+       ";
 $MSG['2__0004'] = "Lingua di default";
 $MSG['2__0005'] = '<span style="color:#CD0000;"><b>Lingua corrente di default</b></span>';
 $MSG['2__0016'] = "Data di Partenza";
@@ -1621,15 +1621,15 @@ $MSG['25_0178'] = "HTML meta Tags";
 $MSG['25_0180'] = "Meta Description Tag";
 $MSG['25_0181'] = "Meta Keywords Tag";
 $MSG['25_0182'] = "Il Meta Description Tag di solito è usato per descrivere le tue pagine nei risultati di ricerca di ricerca di pagine motori dimostrano. <br>
-⇥ ⇥ ⇥ ⇥ Inserisci il testo che meglio descrive il tuo sito qui sotto.";
+         Inserisci il testo che meglio descrive il tuo sito qui sotto.";
 $MSG['25_0184'] = "Il Meta Keywords Tag dà alcuni motori di ricerca informazioni aggiuntive da utilizzare per indicizzare il tuo sito. <br>
-⇥ ⇥ ⇥ ⇥ Inserisci le tue parole chiave qui sotto separate da virgole (ad esempio libri, libri aste, vendite di libri).";
+         Inserisci le tue parole chiave qui sotto separate da virgole (ad esempio libri, libri aste, vendite di libri).";
 $MSG['25_0185'] = "Settaggi Meta Tags aggiornati";
 $MSG['25_0186'] = "Caricamento immagini";
 $MSG['25_0187'] = "Immettere le dimensioni massime consentite (in Kbytes) delle immagini che i venditori possono caricare per ogni asta.";
 $MSG['25_0188'] = "Notifiche e-mails delle aste";
 $MSG['25_0189'] = "Come venditore, puoi scegliere di ricevere una e-mail di notifica per ogni asta che si chiude, o per ricevere una e-mail una volta al giorno segnalato tutte le aste chiuse in quel giorno. <br>
-⇥ ⇥ ⇥ ⇥ La seconda opzione è di solito necessario se si dispone di un enorme numero di aste. <br> Infine si può anche scegliere di non ricevere e-mail di notifica, ma questa scelta non è raccomandata.";
+         La seconda opzione è di solito necessario se si dispone di un enorme numero di aste. <br> Infine si può anche scegliere di non ricevere e-mail di notifica, ma questa scelta non è raccomandata.";
 $MSG['25_0190'] = "Ricevi <b>una</b> e-mail per ogni asta chiusa";
 $MSG['25_0191'] = "Ricevi una e-mail comulativa al giorno";
 $MSG['25_0192'] = "Opzioni di notifica E-mails aggiornate";
