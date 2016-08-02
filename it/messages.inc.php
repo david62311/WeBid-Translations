@@ -1,6 +1,6 @@
 <?php
 /***************************************************************************
- *   copyright				: (C) 2008 - 2016 WeBid
+ *   copyright				: (C) 2008 - 2014 WeBid
  *   site					: http://www.webidsupport.com/
  ***************************************************************************/
 
@@ -1175,6 +1175,9 @@ $MSG['1153'] = 'Stampa fattura';
 $MSG['1154'] = 'È possibile attivare il gateway di pagamento sandbox per testare i gateway di pagamento, ma assicurarsi disattivare la modalità sandbox prima di fare il vostro sito in diretta';
 $MSG['1155'] = "Payment Gateway sandbox";
 
+$MSG['5000'] = 'Devi essere loggato per vedere questa pagina';
+$MSG["5001"] = "Visualizza sito";
+$MSG['5002'] = "Devi essere loggato per offerta";
 $MSG['5003'] = "Settaggi Sito";
 $MSG['5004'] = "Settaggio Valute";
 $MSG['5005'] = "Settaggi Layout generali";
