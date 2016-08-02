@@ -1,6 +1,6 @@
 <?php
 /***************************************************************************
- *   copyright				: (C) 2008 - 2016 WeBid
+ *   copyright				: (C) 2008 - 2014 WeBid
  *   site					: http://www.webidsupport.com/
  ***************************************************************************/
 
@@ -886,7 +886,7 @@ $MSG['841'] = 'Templates Admin';
 $MSG['842'] = 'Imposta Tasse';
 $MSG['843'] = 'Cosa vuoi fare con le aste e le sottocategorie nelle seguenti categorie <br> <small> (Se vuoi spostarle è necessario inserire il codice ID della categoria in cui si desidera vengano spostati)</small>';
 $MSG['844'] = 'Alcune categorie selezionate da spostare non potevano essere trattati perché nessuna categoria ID valida è stato data dove esse sarebbero dovute essere spostate';
-$MSG['845'] = '<p><img src="' . $system->SETTINGS['siteurl'] . 'themes/admin/images/bullet_blue.png"> Shows a category that contains children categories</p><p><img src="' . $system->SETTINGS['siteurl'] . 'themes/admin/images/bullet_red.png"> Shows a category that contains auctions</p>';
+$MSG['845'] = '<p><img src="' . $system->SETTINGS['siteurl'] . 'themes/' . $system->SETTINGS['admin_theme'] . '/images/bullet_blue.png"> Mostra una categoria che contiene le categorie di bambini</p><p><img src="' . $system->SETTINGS['siteurl'] . 'themes/' . $system->SETTINGS['admin_theme'] . '/images/bullet_red.png"> Mostra una categoria che contiene le aste</p>';
 $MSG['846'] = 'Saldo conto Account';
 $MSG['847'] = 'Prezzo';
 $MSG['848'] = 'Sei sicuro di voler eliminare questo feedback dell\'utente (ID: %s)';
