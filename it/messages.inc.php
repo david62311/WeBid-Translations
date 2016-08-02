@@ -1504,13 +1504,13 @@ $MSG['2__0054'] = '<span style="#CD0000;"><b>Già selezionato</b></span>';
 $MSG['2__0056'] = "Annunci in Sospeso";
 $MSG['2__0057'] = "Mostra Contatori";
 $MSG['2__0058'] = "Si può decidere di mostrare alcuni contatori nell'intestazione delle pagine del tuo sito. <br>
-⇥ ⇥ ⇥ ⇥ Ci sono tre diversi contatori disponibili:
-⇥ ⇥ ⇥ ⇥ <ul>
-⇥ ⇥ ⇥ ⇥ <li> aste attive </li>
-⇥ ⇥ ⇥ ⇥ <li> utenti registrati </li>
-⇥ ⇥ ⇥ ⇥ <li> utenti online </li>
-⇥ ⇥ ⇥ ⇥ </ul>
-⇥ ⇥ ⇥ ⇥ È possibile attivare / disattivare ogni contatore in basso";
+Sono disponibili tre diversi contatori disponibili:
+<ul>
+<li>aste attive</li>
+<li>utenti registrati</li>
+<li>Utenti Online.</li>
+</ul>
+è possibile attivare/disattivare ciascun contatore sotto";
 $MSG['2__0059'] = "Utenti Online";
 $MSG['2__0060'] = "Aste attive";
 $MSG['2__0061'] = "Utenti Registrati";
