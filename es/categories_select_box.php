@@ -1,0 +1,17 @@
+	<option value="0">Todas las categorías</option>
+	<option value="0">----------------------</option>
+	<option value="2">Arte y Antiguedades</option>
+	<option value="29">Libros</option>
+	<option value="68">Ropa y Accesorios</option>
+	<option value="72">Monedas y Sellos</option>
+	<option value="75">Coleccionables</option>
+	<option value="113">Comics, Cromos & Ciencia Ficcion</option>
+	<option value="122">Computadoras y Software</option>
+	<option value="127">Electrónica y Fotografía</option>
+	<option value="133">Hogar y Jardin</option>
+	<option value="143">Cine y Vídeo</option>
+	<option value="150">Musica</option>
+	<option value="157">Oficina y Negocios</option>
+	<option value="162">Otros Bienes y Servicios</option>
+	<option value="170">Deportes y Recreación</option>
+	<option value="174">Juguetes y juegos</option>
