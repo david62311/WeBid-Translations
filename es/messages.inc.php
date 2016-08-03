@@ -1,7 +1,8 @@
 <?php
 /***************************************************************************
- *   copyright				: (C) 2008 - 2014 WeBid
+ *   copyright				: (C) 2008 - 2016 WeBid
  *   site					: http://www.webidsupport.com/
+ *	08-02-16 updates by david62311
  ***************************************************************************/
 
 /***************************************************************************
@@ -16,13 +17,15 @@ if (!defined('InWeBid')) exit();
 
 // CHARSET ENCODING
 // Change the charset according to the language used in this file.
-$CHARSET = "ISO-8859-1";
+// UTF-8 should work with almost any language
+// This ensures we're not degrading to Latin:
+$CHARSET = "UTF-8";
 // DOCUMENT DIRECTION
-// Change the $DOCDIR variable below according to the document direction needed
+// Change the $DOCDIR variable below according to the document direction neeeded
 // by the language you are using.
 // Possible values are:
 // - ltr (default) - means left-to-right document (almost any language)
-// - rtl - means right-to-left document (i.e. arabic, hebrew, ect).
+// - rtl - means right-to-left document (i.e. arabic, hebrew, etc).
 $DOCDIR = "ltr";
 // Error messages and user interface messages are below. Translate them taking care of leaving
 // The PHP and HTML tags unchanged.
@@ -70,19 +73,19 @@ $ERR_040 = "Eres el pujador ganador y no puedes colocar una puja inferior a tu a
 $ERR_041 = "Por favor, elige una valoración de entre 1 y 5";
 $ERR_042 = "Falta tu comentario";
 $ERR_043 = "Formato de campo inválido: debe ser numérico";
-$ERR_044 = "El usuario debe ser miembro de por lo menos un grupo";
+$ERR_044 = "El usuario debe ser miembro de por lo menos un grupo"; //# "A user must be a member of atleast one group"
 $ERR_047 = "Faltan campos requeridos";
 $ERR_048 = "Login incorrecto";
-$ERR_049 = "El nombre de la categoría no puede estar vacío";
-$ERR_050 = "Al menos un grupo debe tener activado el Ingreso Automático";
+$ERR_049 = "El nombre de la categoría no puede estar vacío"; //# The category's name cannot be empty
+$ERR_050 = "Al menos un grupo debe tener activado el Ingreso Automático"; //# "At least one group must have Auto Join enabled"
 $ERR_051 = "Por favor, introduce un número válido de dígitos";
 $ERR_054 = "Por favor, rellena los campos de contraseña";
 $ERR_055 = "Usuario <i>%s</i> ya existe en la base de datos";
 $ERR_056 = "Falta el valor de incremento de puja";
 $ERR_057 = "Los valores de incremento de la puja deben ser numéricos";
 $ERR_058 = "Formato incorrecto de moneda.";
-$ERR_059 = "Su oferta anterior para esta subasta es mayor que su oferta actual.<br>En una subasta holandesa, no puede pujar si su <b>puja anterior veces el número de artículos</b> es mayor que su <b>puja actual veces número de artículos</b>.";
-$ERR_060 = "La fecha de inicio no puede estar en el pasado.";
+$ERR_059 = "Su oferta anterior para esta subasta es mayor que su oferta actual.<br>En una subasta holandesa, no puede pujar si su <b>puja anterior veces el número de artículos</b> es mayor que su <b>puja actual veces número de artículos</b>."; //# Your previous bid for this auction is higher than your current bid.<br>  In Dutch Auctions you may not place a bid if your previous <b>amount of bid times the quantity</b> is greater than your <b>amount of current bid times the quantity</b>.
+$ERR_060 = "La fecha de inicio no puede estar en el pasado."; //# The start date cannot be in the past.
 $ERR_061 = "El precio de comprar ahora no se ha insertado correctamente";
 $ERR_062 = "No puedes fijar un precio en una subasta holandesa";
 $ERR_063 = "No puedes utilizar código incremento en la subasta holandesa";
@@ -91,16 +94,14 @@ $ERR_065 = "Error actualizando información";
 $ERR_066 = "Error borrando información";
 $ERR_067 = "Faltan campos requeridos (todos los campos son requeridos).";
 $ERR_068 = "El tema elegido no existe";
-$ERR_069 = "Conversión de moneda falio";
-$ERR_070 = "Este mensaje no existe";
-$ERR_071 = "Nombre de usuario no es válido. Sólo puede contener letras y números";
-$ERR_072 = "Debe introducir la cantidad de la oferta";
-$ERR_073 = "Usted no puede hacer una oferta en una subasta que aún no ha comenzado";
-$ERR_074 = "Ya has dejado tu comentario en esta transacción";
-$ERR_075 = 'No existen ofertas';
+$ERR_069 = "Conversión de moneda falio"; //# Currency conversion failed
+$ERR_070 = "Este mensaje no existe"; //# This message doesn't exist
+$ERR_071 = "Nombre de usuario no es válido. Sólo puede contener letras y números"; //# Username is invalid can only contain letters and numbers
+$ERR_072 = "Debe introducir la cantidad de la oferta"; //# You must enter a bid amount
+$ERR_073 = "Usted no puede hacer una oferta en una subasta que aún no ha comenzado"; //# You cannot bid on an auction that has not yet started
+$ERR_074 = "Ya has dejado tu comentario en esta transacción"; //# You have already left feedback on this transaction
+$ERR_075 = "No existen ofertas"; //#No bids
 $ERR_076 = 'Combinación invalida de nombre/contraseña';
-$ERR_077 = 'Valid Token Expired';
-$ERR_078 = 'You must agree to the Terms and Conditions';
 
 $ERR_100 = "Usuario no existe";
 $ERR_101 = "Contraseña incorrecta";
@@ -120,14 +121,13 @@ $ERR_114 = "Sin subastas activas para esta categoría";
 $ERR_115 = "Dirección de e-mail ya está en uso";
 $ERR_117 = "Formato de fecha incorrecto";
 $ERR_122 = "Subasta no encontrada";
-$ERR_600 = 'Tipo de subasta no válida';
+$ERR_600 = "Tipo de subasta no válida"; //# 'Invalid auction type'
 $ERR_601 = "Campo cantidad no es correcto";
 $ERR_602 = "Imágenes deben ser GIF o JPG";
 $ERR_603 = "La imagen es demasiado grande.";
 $ERR_606 = "El ID de subasta especificado no es correcto";
 $ERR_607 = "Tu puja es inferior a la puja mínima";
-$ERR_608 = "La cantidad especificada no es válida, no se puede pujar por más artículos que están disponibles";
-$ERR_608a = "The specified quantity is not valid, please enter a valid amount";
+$ERR_608 = "La cantidad especificada no es válida, no se puede pujar por más artículos que están disponibles"; //# "The specified quantity is not valid, you cannot bid for more items than are available"
 $ERR_609 = "El usuario no existe";
 $ERR_610 = "Escribe tu nombre de usuario y contraseña";
 $ERR_611 = "Contraseña incorrecta";
@@ -137,11 +137,10 @@ $ERR_616 = "Zip/Código Postal demasiado corto";
 $ERR_617 = "Número de teléfono incorrecto";
 $ERR_618 = "Tu cuenta ha sido suspendida por el administrador.";
 $ERR_619 = "Esta subasta ha sido suspendida";
-$ERR_620 = "Su cuenta aún no se ha activado, por favor revise su correo electrónico para el enlace de activación.";
-$ERR_621 = "Su cuenta aún no se ha activado por el administrador.";
-$ERR_622 = "Subasta no existe.";
-$ERR_623 = "La subasta que está intentando encontrar, nunca existió o ha sido eliminado.";
-$ERR_624 = "No message to post";
+$ERR_620 = "Su cuenta aún no se ha activado, por favor revise su correo electrónico para el enlace de activación."; //# "Your account has yet to be activated please check your emails for the activation link."
+$ERR_621 = "Su cuenta aún no se ha activado por el administrador."; //# "Your account has yet to be activated by admin."
+$ERR_622 = "Subasta no existe."; //# "No such auction."
+$ERR_623 = "La subasta que está intentando encontrar, nunca existió o ha sido eliminado."; //# "The auction you are trying to find either never existed or has been removed."
 $ERR_700 = "Formato de fecha incorrecto";
 $ERR_701 = "Cantidad no válida (debe ser >0).";
 $ERR_702 = "La puja actual debe ser mayor que la puja mínima.";
@@ -154,20 +153,31 @@ $ERR_709 = "La imagen que subiste es demasiado grande. No puede exceder ";
 $ERR_710 = "Tipo de archivo erróneo. Los tipos permitidos son: GIF, PNG and JPEG";
 $ERR_711 = "No puedes comprar, eres el vendedor!";
 $ERR_712 = "<b>Comprar Ahora</b> no está disponible para esta subasta";
-$ERR_713 = 'El valor \'de\' debe ser menor que el valor \'a\'';
-$ERR_714 = 'El valor de la reventa debe ser numérico.';
-$ERR_715 = 'No se puede optar por reventa tantas veces.';
+$ERR_713 = "El valor 'de' debe ser menor que el valor 'a'"; //# The value from must be less than the value to
+$ERR_714 = "El valor de la reventa debe ser numérico."; //# 'The relist value must be numeric'
+$ERR_715 = "No se puede optar por reventa tantas veces."; //# 'You cannot choose to relist that many times'
 $ERR_5000 = "Mensajes a mostrar deben ser numéricos";
 $ERR_5001 = "Mensajes a mostrar no pueden ser cero";
 $ERR_5002 = "Debes seleccionar al menos un tipo de estadística (accesos, navegadores y plataformas, por país)";
 $ERR_5014 = "Tema o mensaje desaparecidos";
+$ERR_5029 = "Falta el nombre";
+$ERR_5030 = "Falta el nombre de usuario";
+$ERR_5031 = "Falta la contraseña";
+$ERR_5032 = "Por favor entra tu contraseña dos veces";
+$ERR_5033 = "Falta la dirección de e-mail";
+$ERR_5034 = "Falta la dirección";
+$ERR_5035 = "Falta la ciudad";
+$ERR_5036 = "Falta la provincia";
+$ERR_5037 = "Falta el país";
+$ERR_5038 = "Falta el ZIP/Código Postal";
+$ERR_5039 = "Falta el teléfono";
+$ERR_5040 = "Falta la fecha de nacimiento o incompleta";
 $ERR_5045 = "El precio de reserva no puede ser inferior a la puja mínima";
 $ERR_5046 = "El precio de Comprar Ahora no puede ser inferior a la puja mínima y /o al precio de reserva";
 $ERR_25_0001 = "Por favor, elige una subcategoría";
-$ERR_25_0002 = "<p>El acceso a archivos por URL está deshabilitado en su servidor, entonces WeBid es incapaz de averiguar la versión";
+$ERR_25_0002 = "<p>El acceso a archivos por URL está deshabilitado en su servidor, entonces WeBid es incapaz de averiguar la versión"; //# <p>URL file-access is disabled on your server so WeBid is unable to run the version check</p>
 
 // UI Messages =============================================================
-$MSG['000'] = "n/a";
 $MSG['001'] = "Registro de nuevo usuario";
 $MSG['002'] = "Tu nombre";
 $MSG['003'] = "Nombre de usuario";
@@ -183,8 +193,11 @@ $MSG['012'] = "ZIP/Código Postal";
 $MSG['013'] = "Teléfono";
 $MSG['014'] = "País";
 $MSG['015'] = "--Seleccionar aquí";
+$MSG['016'] = "Registro completo. Tus datos han sido recibidos.<br>Un e-mail de confirmación ha sido enviado a: <i>%s</i>";
+$MSG['016_a'] = "Registro completo. Tus datos han sido recibidos.<br>El administrador del en breve revisará tu cuenta, una vez tu cuenta haya sido aprobada por el administrador podrás ingresar";
+$MSG['016_b'] = "Registro completo. Tus datos han sido recibidos.<br>Puedes ahora ingresar usando tu nombre de usuario y contraseña.";
 $MSG['017'] = "Título Artículo";
-$MSG['018'] = "Descripción";
+$MSG['018'] = "Descripción<br>(HTML permitido)";
 $MSG['019'] = "Imagen por defecto";
 $MSG['020'] = "La subasta comienza con";
 $MSG['021'] = "Precio de reserva";
@@ -227,10 +240,10 @@ $MSG['058'] = "Enviar nueva moneda";
 $MSG['059'] = "Email Enviado";
 $MSG['060'] = "Símbolo de moneda actualizado";
 $MSG['067'] = "Ver Subastas Abiertas";
-$MSG['067a'] = "Buscar subastas";
+$MSG['067a'] = "Subastas de búsqueda";
 $MSG['068'] = "Permitir Incrementos Personalizados";
 $MSG['069'] = "Duración Subastas";
-$MSG['070'] = "El usuario puede fijar incrementos de las ofertas para sus subastas (esto es la diferencia mínima entre dos ofertas)";
+$MSG['070'] = "El usuario puede fijar incrementos de las ofertas para sus subastas (esto es la diferencia mínima entre dos ofertas)"; //# "User can set custom bid increments for thier auctions (this is the minimum difference between two bids)"
 $MSG['071'] = "Actualizar";
 $MSG['072'] = " usuarios esperando comentarios tuyos";
 $MSG['073'] = "Borrar Líneas";
@@ -240,19 +253,19 @@ $MSG['076'] = "Símbolo Moneda";
 $MSG['077'] = "Editar dirección e-mail administrador";
 $MSG['078'] = "Tabla Categorías";
 $MSG['079'] = "Tu subasta fue cerrada";
-$MSG['080'] = "Resincronizar o restabelecer caches";
+$MSG['080'] = "Resincronizar o restabelecer caches"; //# Resynchronise or Reset Caches
 $MSG['081'] = "Tabla Países";
-$MSG['082'] = "Convertir";
-$MSG['083'] = "de esta moneda";
+$MSG['082'] = "Convertir"; //# Convert
+$MSG['083'] = "de esta moneda"; //# of this currency
 $MSG['084'] = "Mensaje publicado";
-$MSG['085'] = "::: CONVERTIDOR DE MONEDA :::";
+$MSG['085'] = "::: CONVERTIDOR DE MONEDA :::"; //# ::: CURRENCY CONVERTER :::
 $MSG['086'] = "Tabla de categorías actualizada";
-$MSG['087'] = "Descripcion";
-$MSG['088'] = "a esta moneda";
+$MSG['087'] = "Descripción";
+$MSG['088'] = "a esta moneda"; //# into this currency
 $MSG['089'] = "Procesar cambios";
 $MSG['090'] = "Tabla de países actualizada";
 $MSG['091'] = "Cambiar idioma";
-$MSG['092'] = 'Puede editar, borrar o añadir métodos de pago mediante el siguiente formulario. Estas son las alternativas de pagos externos, para activar o desactivar las pasarelas de pago incorporado ver la página <a href="fee_gateways.php">configuration de pasarelas de pago</a>';
+$MSG['092'] = "Puede editar, borrar o añadir métodos de pago mediante el siguiente formulario. Estas son las alternativas de pagos externos, para activar o desactivar las pasarelas de pago incorporado ver la página <a href=\"fee_gateways.php\">configuration de pasarelas de pago</a>"; //# 'Edit, delete or add payment methods using the form below. These are alternative external payment options, to enable or disable the inbuilt payment gateways see the <a href="fee_gateways.php">payment gateway settings</a> page.'
 $MSG['093'] = "Tabla de métodos de pago actualizada";
 $MSG['094'] = "Editar, borrar o añadir paises utilizando el siguiente formulario.";
 $MSG['095'] = "Bienvenido, eres ahora nuevo miembro!";
@@ -262,7 +275,6 @@ $MSG['098'] = "confirme su registro";
 $MSG['099'] = "Tu subasta ha sido confirmada";
 $MSG['100'] = "La subasta ha sido recibida correctamente. <br> Un e-mail de confirmación se ha enviado a tu dirección de correo electrónico.<br>";
 $MSG['101'] = "URL de la Subasta: ";
-$MSG['102'] = 'Auction #%s, your auction will close %s';
 $MSG['103'] = " Buscar ";
 $MSG['104'] = "Mostrar ";
 $MSG['105'] = "Ver historial";
@@ -294,8 +306,9 @@ $MSG['128'] = "Incrementos puja";
 $MSG['129'] = "ID";
 $MSG['130'] = "Puja";
 $MSG['131'] = "Comprador";
-$MSG['132'] = "Tabla de Traduccion de Categorías";
+$MSG['132'] = "Tabla de Traduccion de Categorías"; //# Categories Translation Table
 $MSG['133'] = "Tabla incrementos puja";
+$MSG['134'] = "Puja actual";
 $MSG['135'] = "Editar, borrar o añadir incrementos utilizando el siguiente formulario.<br>
             Ten cuidado, no hay control sobre la congruencia de valores de la tabla.
             Debes tener cuidado en comprobarlo tú mismo. Los únicos datos de verificación se realizan sobre los campos de contenido (deben ser numéricos), pero la relación entre ellos no está marcada.";
@@ -305,7 +318,7 @@ $MSG['138'] = "Volver a la subasta";
 $MSG['139'] = "Enviar esta subasta a un amigo";
 $MSG['140'] = "El nombre de tu amigo";
 $MSG['141'] = "El e-mail de tu amigo";
-$MSG['142'] = "Habilitar artículos destacados";
+$MSG['142'] = "Habilitar artículos destacados"; //# Enable Featured Items
 $MSG['143'] = "Tu e-mail";
 $MSG['144'] = "Añadir un comentario";
 $MSG['145'] = "Enviar a tu amigo";
@@ -320,14 +333,15 @@ $MSG['153'] = "Para pujar debes estar registrado.";
 $MSG['154'] = "Estás pujando en:";
 $MSG['155'] = "Artículo:";
 $MSG['156'] = "Tu puja:";
-$MSG['157'] = "Permite a los vendedores hacer que sus subastas aparezcan en la página principal y en las páginas de categorías";
+$MSG['157'] = "Permite a los vendedores hacer que sus subastas aparezcan en la página principal y en las páginas de categorías"; //# Allows sellers to make their auctions featured on the homepage and category pages
 $MSG['158'] = "Enviar mi puja";
 $MSG['159'] = "Tu puja ha sido registrada";
+$MSG['159'] = "Pujador:";
 $MSG['160'] = "Tabla de incrementos actualizada";
 $MSG['161'] = "Editar, borrar o añadir categorías utilizando el siguiente formulario.<br>[<a HREF=\"javascript:window_open('categorieshelp.php','incre',400,300,30,30)\" CLASS=\"links\">Leer más</a>]";
-$MSG['162'] = "Habilitar elementos resaltados";
+$MSG['162'] = "Habilitar elementos resaltados"; //# Enable Highlighted Items
 $MSG['163'] = "Registrarse!";
-$MSG['164'] = "Permite a los vendedores resaltar sus subastas (aparecen en un color diferente en resultados de búsqueda, etc)";
+$MSG['164'] = "Permite a los vendedores resaltar sus subastas (aparecen en un color diferente en resultados de búsqueda, etc)"; //# Allows sellers to make their auctions highlighted (displayed listing in a different colour in search results etc)
 $MSG['165'] = "Categoría: ";
 $MSG['166'] = "Inicio";
 $MSG['167'] = "Foto";
@@ -338,7 +352,7 @@ $MSG['171'] = "Finaliza en";
 $MSG['171a'] = "Finalizada";
 $MSG['172'] = "No hay subastas activas en esta categoría";
 $MSG['173'] = "Resultado de la búsqueda: ";
-$MSG['174'] = "Habilitar artículos en negrita";
+$MSG['174'] = "Habilitar artículos en negrita"; //# Enable Bold Items
 $MSG['175'] = "Fecha y hora";
 $MSG['176'] = "Pujador";
 $MSG['177'] = "Indice categorías";
@@ -355,10 +369,10 @@ $MSG['187'] = "Tu nombre de usuario";
 $MSG['188'] = "Tu contraseña";
 $MSG['189'] = "Total Debido";
 $MSG['190'] = "Tu categoría de artículos";
-$MSG['191'] = "Su mensaje de los derechos de autor";
-$MSG['192'] = "Este es un mensaje que se agrega a la parte inferior de cada página";
+$MSG['191'] = "Su mensaje de los derechos de autor"; //# Your copyright message
+$MSG['192'] = "Este es un mensaje que se agrega a la parte inferior de cada página"; //# This is a message that is added to the bottom of every page
 $MSG['193'] = "Duración de la subasta";
-$MSG['194'] = "Permite a los vendedores hacer sus subastas en negrita (aparecen en negrita en resultados de búsqueda, etc)";
+$MSG['194'] = "Permite a los vendedores hacer sus subastas en negrita (aparecen en negrita en resultados de búsqueda, etc)"; //# Allows sellers to make their auctions bold (displayed listing in bold in search results etc)
 $MSG['195'] = "URL de la foto";
 $MSG['196'] = "Descripción del artículo";
 $MSG['197'] = "Título de la subasta";
@@ -375,7 +389,7 @@ $MSG['207'] = "Dejar comentario";
 $MSG['208'] = "Ver Comentarios";
 $MSG['209'] = "Usuario registrado desde: ";
 $MSG['210'] = "Contactar ";
-$MSG['211'] = "Iniciar subasta ahora";
+$MSG['211'] = "Iniciar subasta ahora"; //# Start auction now
 $MSG['212'] = "Subastas:";
 $MSG['213'] = "Ver subastas activas";
 $MSG['214'] = "Ver Subastas cerradas";
@@ -424,22 +438,23 @@ $MSG['256'] = "O selecciona la imagen que quiere adjuntar (opcional)";
 $MSG['257'] = "Tipo de subasta";
 $MSG['258'] = "Cantidad de artículos";
 $MSG['259'] = "Artículo";
-$MSG['260'] = "O comenzar a partir de:";
+$MSG['260'] = "O comenzar a partir de:"; //# Or start at:
 $MSG['261'] = "Tipo subasta";
 $MSG['262'] = "Tu sugerencia";
-$MSG['263'] = "Valor de tarifa";
+$MSG['263'] = "Valor de tarifa"; //# Fee Amount
 $MSG['264'] = "Todavía puedes ";
 $MSG['265'] = "hacer cambios";
 $MSG['266'] = " a esta subasta";
 $MSG['267'] = "Si llegaste a esta página, tú o alguien que dice ser tú, ha suscrito en este sitio.<br>Para confirmar tu registro, simplemente pulse el <b>Confirmar</b> a continuación.<br>Si no deseas registrarte y deseas eliminar tus datos de nuestra base de datos, utilize el botón <b>Rechazar</b>.";
-$MSG['268'] = "Opciones adicionales";
+$MSG['268'] = "Opciones adicionales"; //# Additional options
 $MSG['269'] = "Tu puja ha sido registrada";
 $MSG['270'] = "Volver";
 $MSG['271'] = "Tu puja ha sido procesada";
 $MSG['272'] = "Subasta:";
-$MSG['273'] = "Marque en Destacado";
-$MSG['274'] = "Marque en Negrita";
+$MSG['273'] = "Marque en Destacado"; //# Make featured
+$MSG['274'] = "Marque en Negrita"; //# Make bold
 $MSG['275'] = "Ir!";
+$MSG['275a'] = "Login";
 $MSG['276'] = "Categorías";
 $MSG['277'] = "Todas las categorías";
 $MSG['278'] = "Subastas de reciente creación";
@@ -456,14 +471,14 @@ $MSG['288'] = "???Búsqueda palabra(s) clave no puede estar vacía";
 $MSG['289'] = "Total páginas:";
 $MSG['290'] = "Total artículos:";
 $MSG['291'] = "???artículos por página mostrados";
-$MSG['292'] = "Resalte su artículo";
-$MSG['293'] = "NOMBRE DE USUARIO";
+$MSG['292'] = "Resalte su artículo"; //# Make highlighted
+$MSG['293'] = "NOMBRE DE USUARIO"; //# NICK
 $MSG['294'] = "NOMBRE";
 $MSG['295'] = "PAIS";
 $MSG['296'] = "E-MAIL";
 $MSG['297'] = "ACCION";
 $MSG['298'] = "Editar";
-$MSG['299'] = "Activar Usuario";
+$MSG['299'] = "Activar Usuario"; //# Activate User
 $MSG['300'] = "Suspender";
 $MSG['301'] = "usuarios encontrados en la base de datos";
 $MSG['302'] = "Nombre";
@@ -479,7 +494,7 @@ $MSG['311'] = "subastas encontradas en la base de datos";
 $MSG['312'] = "Titulo";
 $MSG['313'] = "Usuario";
 $MSG['314'] = "Fecha";
-$MSG['319'] = "Envío";
+$MSG['319'] = "Envío"; //# Shipping
 $MSG['321'] = "Suspender subasta";
 $MSG['322'] = "Reactivar subasta";
 $MSG['323'] = "Estás seguro de que quieres suspender esta subasta?";
@@ -501,13 +516,13 @@ $MSG['341'] = "Ver todas las noticias";
 $MSG['342'] = " Noticias";
 $MSG['343'] = "Editar noticia";
 $MSG['344'] = "Ajustes de tiempo";
-$MSG['345'] = "Elija la zona horaria para todos los tiempos en su sitio";
+$MSG['345'] = "Elija la zona horaria para todos los tiempos en su sitio"; //# "Choose the time zone you want all the times on your site to be in"
 $MSG['346'] = "Zona horaria";
 $MSG['347'] = "Ajustes de tiempo actualizados";
-$MSG['348'] = "Configuraón de procedimientos batch";
+$MSG['348'] = "Configuraón de procedimientos batch"; //# Batch Procedures Settings
 $MSG['349'] = "Responder";
 $MSG['351'] = "Volver a la bandeja de entrada";
-$MSG['352'] = "Formato de correo electrónico";
+$MSG['352'] = "Formato de correo electrónico"; //# Email Format
 $MSG['354'] = "Subastas Cerradas";
 $MSG['355'] = "Habilitar el auto-deshabilitar ¡Compralo Ya! ";
 $MSG['356'] = "Límite ¡Compralo Ya!";
@@ -518,15 +533,16 @@ $MSG['363'] = "Formato Fechas";
 $MSG['364'] = "Fecha";
 $MSG['365'] = "Usuarios Admin";
 $MSG['367'] = "Nuevo usuario admin ";
-$MSG['368'] = "Añadir categorías en masa<br><span class=\"smallspan\">Sólo tienes que introducir los nombres de categorías cada uno en su propia linea</span>";
+$MSG['368'] = "Añadir categorías en masa<br><span class=\"smallspan\">Sólo tienes que introducir los nombres de categorías cada uno en su propia linea</span>"; //# Mass category add<br><span class=\"smallspan\">Just enter category names and put each category on a new line</span>
+
 $MSG['371'] = "WeBid necesita periodicamente ejecutar <code>cron.php</code> para cerrar subastas expiradas y enviar emails de notificación al vendedor y/o al ganador. La manera recomendada de ejecutar <code>cron.php</code> es la creación de un <a href=\"http://www.aota.net/Script_Installation_Tips/cronhelp.php4\" target=_blank>cronjob</a> si corres un Unix/Linux server.<br>Si por cualquier razón no puedes ejecutar un cronjob en tu servidor, puedes elegir la <b>Non-batch</b> opcion siguiente para tener <code>cron.php</code> ejecutado por el mismo WeBid : en este caso <code>cron.php</code> se ejecutará cada vez que alguien acceda a tu página.";
 $MSG['372'] = "Ejecutar cron";
-$MSG['373'] = "Batch";
-$MSG['374'] = "Non-batch";
+$MSG['373'] = "Batch"; //# Batch
+$MSG['374'] = "Non-batch"; //# Non-batch
 $MSG['375'] = "De acuerdo con la configuración por defecto de WeBid, <code> cron.php </code> automáticamente eliminará la subasta de más de 30 días.<br>Puedes cambiar el período de tiempo siguiente.";
 $MSG['376'] = "Borrar subastas más antiguas de";
 $MSG['377'] = " días";
-$MSG['378'] = "Configuración batch ha sido actualizada";
+$MSG['378'] = "Configuración batch ha sido actualizada"; //# Batch settings updated.
 $MSG['379'] = "Elige el formato de fecha que deseas utilizar en tu sítio.";
 $MSG['382'] = "mm/dd/yyyy";
 $MSG['383'] = "dd/mm/yyyy";
@@ -537,63 +553,63 @@ $MSG['387'] = "últimos Seis Meses";
 $MSG['388'] = "últimos Doce Meses";
 $MSG['389'] = "Comentario Como Vendedor";
 $MSG['390'] = "Comentario Como Comprador";
-$MSG['391'] = "Valor";
-$MSG['392'] = "Tipo de Tarifa";
-$MSG['393'] = "Plano";
-$MSG['394'] = "Agregar";
-$MSG['395'] = "Activar/Desactivar tarifas";
-$MSG['396'] = "Configuraciónes de tarifas actualizadas";
-$MSG['397'] = "¿Deseas que tu sitio de subastas sea completamente gratis ó deseas cobrar?";
-$MSG['398'] = "Enviar Boletín";
-$MSG['399'] = "Search for it!";
+$MSG['391'] = "Valor"; //# Amount
+$MSG['392'] = "Tipo de Tarifa"; //# Fee Type
+$MSG['393'] = "Plano"; //# flat
+$MSG['394'] = "Agregar"; //# Add
+$MSG['395'] = "Activar/Desactivar tarifas"; //# Enable/Disable Fees
+$MSG['396'] = "Configuraciónes de tarifas actualizadas"; //# Fee Settings Updated
+$MSG['397'] = "¿Deseas que tu sitio de subastas sea completamente gratis ó deseas cobrar?"; //# Do you want your auction site to be completely free or do you want to charge for it
+$MSG['398'] = "Enviar Boletín"; //# Send Newsletter
+$MSG['399'] = "Búsquelo!";
 $MSG['400'] = "Dirección&nbsp;de&nbsp;correo&nbsp;electronico";
-$MSG['401'] = "Política de Privacidad";
-$MSG['402'] = "Página de Políticas de Privacidad";
-$MSG['403'] = "Activar Página de Políticas de Privacidad";
-$MSG['404'] = "Contenido de la Política de Privacidad<br>(HTML permitido)";
-$MSG['405'] = "Active esta opción si desea que un vínculo a la Política de Privacidad aparezca en el pie de sus páginas.";
-$MSG['406'] = "Configuraciónes de política de privacidad actualizadas";
+$MSG['401'] = "Política de Privacidad"; //# Privacy Policy
+$MSG['402'] = "Página de Políticas de Privacidad"; //# Privacy Policy Page
+$MSG['403'] = "Activar Página de Políticas de Privacidad"; //# Activate Privacy Policy Page?
+$MSG['404'] = "Contenido de la Política de Privacidad<br>(HTML permitido)"; //# Privacy Policy content<br>(HTML allowed)
+$MSG['405'] = "Active esta opción si desea que un vínculo a la Política de Privacidad aparezca en el pie de sus páginas."; //# Activate this option if you want a Privacy Policy link to appear in the footer of your pages.
+$MSG['406'] = "Configuraciónes de política de privacidad actualizadas"; //# Privacy Policy Settings Updated
 $MSG['409'] = "Tratamiento de errores";
 $MSG['410'] = "Errores fatales que ocurren durante la ejecución de WeBid (normalmente errores MySQL) enviará a los usuarios a una página de error. Puedes personalizar el mensaje de error que deseas que aparezca en la página de error a continuación. <br>NOTA: Se permiten las etiquetas HTML.";
 $MSG['411'] = "Texto Error";
 $MSG['412'] = "Dirección de E-mail Error";
 $MSG['413'] = "Configuración del tratamiento de errores actualizado.";
 $MSG['415'] = "Error";
-$MSG['417'] = "General";
-$MSG['418'] = "¿Está seguro de que desea activar este usuario?";
-$MSG['419'] = "¿Está seguro que desea eliminar este usuario? Todos sus subastas y ofertas serán eliminados y esto no se puede deshacer";
-$MSG['420'] = "El usuario es el VENDEDOR en las subastas siguientes:<br>";
-$MSG['421'] = "El usuario ha pujado en %s subasta(s).";
-$MSG['422'] = "Pagos pendientes";
-$MSG['423'] = "El pago ha sido exitoso";
-$MSG['424'] = "Su pago ha sido confirmado.<br>Gracias por su negocio.";
-$MSG['425'] = "Error de transaccion de pago";
-$MSG['426'] = "Su pago no ha sido registrado, o no fue válido.<br>Disculpe las molestias.";
-$MSG['427'] = "Habilitar pujas proxy";
-$MSG['428'] = "Activar/Desactivar la función de puja proxy";
+$MSG['417'] = "General"; //# General
+$MSG['418'] = "¿Está seguro de que desea activar este usuario?"; //# Are you sure you want to activate this user?
+$MSG['419'] = "¿Está seguro que desea eliminar este usuario? Todos sus subastas y ofertas serán eliminados y esto no se puede deshacer"; //# Are you sure you want to delete this user? All their auctions and bids will be deleted and this cannot be undone
+$MSG['420'] = "El usuario es el VENDEDOR en las subastas siguientes:<br>"; //# The user is the SELLER in the following auctions:<br>
+$MSG['421'] = "El usuario ha pujado en %s subasta(s)."; //# The user has placed bids on %s auction(s).
+$MSG['422'] = "Pagos pendientes"; //# Outstanding payments
+$MSG['423'] = "El pago ha sido exitoso"; //# Payment Success
+$MSG['424'] = "Su pago ha sido confirmado.<br>Gracias por su negocio."; //# Your payment has been confirmed.<br><br>Thank you for your business.
+$MSG['425'] = "Error de transaccion de pago"; //# Payment Failure
+$MSG['426'] = "Su pago no ha sido registrado, o no fue válido.<br>Disculpe las molestias."; //# Your payment hasn't been registered, or was invalid.<br> <br> Sorry for the inconvenience.
+$MSG['427'] = "Habilitar pujas proxy"; //# Enable Proxy Bidding
+$MSG['428'] = "Activar/Desactivar la función de puja proxy"; //# Enable/ Disable the proxy bidding feature
 $MSG['429'] = "No hubo pujas o precio de reserva no se cumplió";
-$MSG['430'] = "Tarifa de Registro de Usuario";
-$MSG['431'] = "Tarifas de Subasta";
-$MSG['432'] = "Tarifa de iniciar subasta";
-$MSG['433'] = "Tarifa para destacar en la página principal";
-$MSG['434'] = "Tarifa de artículo destacado";
-$MSG['435'] = "Tarifa para subir imágenes";
-$MSG['436'] = "Tarifa ¡Cómpralo ya!";
-$MSG['437'] = "Tarifa de reventa";
-$MSG['439'] = "Tarifa de artículo en negrita";
-$MSG['440'] = "Tarifa de de precio reserva";
-$MSG['441'] = "Por favor, cree su nombre de usuario y contraseña";
-$MSG['442'] = "Por favor, ingrese su nombre de usuario y contraseña";
-$MSG['443'] = "La caja de entrada de %s está llena. Por favor, intentelo más tarde";
-$MSG['444'] = "Mensajes eliminados";
-$MSG['445'] = "Gateways de Pago";
-$MSG['446'] = "¿Necesario?";
-$MSG['447'] = "¿Habilitado?";
-$MSG['448'] = "Grupos de usuarios";
-$MSG['449'] = "ID de grupo";
-$MSG['450'] = "Nombre del grupo";
-$MSG['451'] = "Cantidad de usuarios";
-$MSG['452'] = "Agregar/Editar grupo";
+$MSG['430'] = "Tarifa de Registro de Usuario"; //# User Signup Fee
+$MSG['431'] = "Tarifas de Subasta"; //# Auction Fees
+$MSG['432'] = "Tarifa de iniciar subasta"; //# Auction Setup Fee
+$MSG['433'] = "Tarifa para destacar en la página principal"; //# Home Page Featured Fee
+$MSG['434'] = "Tarifa de artículo destacado"; //# Highlighted Item Fee
+$MSG['435'] = "Tarifa para subir imágenes"; //# Images Upload Fee
+$MSG['436'] = "Tarifa ¡Cómpralo ya!"; //# Buy Now Fee
+$MSG['437'] = "Tarifa de reventa"; //# Relist Fee
+$MSG['439'] = "Tarifa de artículo en negrita"; //# Bold Item Fee
+$MSG['440'] = "Tarifa de de precio reserva"; //# Reserve Price Fee
+$MSG['441'] = "Por favor, cree su nombre de usuario y contraseña"; //# Please create your username and password
+$MSG['442'] = "Por favor, ingrese su nombre de usuario y contraseña"; //# Please enter your username and password
+$MSG['443'] = "La caja de entrada de %s está llena. Por favor, intentelo más tarde"; //# %s currently has a full inbox at the moment please try again later
+$MSG['444'] = "Mensajes eliminados"; //# Messages deleted
+$MSG['445'] = "Gateways de Pago"; //# Payments Gateways
+$MSG['446'] = "¿Necesario?"; //# Required?
+$MSG['447'] = "¿Habilitado?"; //# Enabled?
+$MSG['448'] = "Grupos de usuarios"; //# User Groups
+$MSG['449'] = "ID de grupo"; //# Group ID
+$MSG['450'] = "Nombre del grupo"; //# Group Name
+$MSG['451'] = "Cantidad de usuarios"; //# User Count
+$MSG['452'] = "Agregar/Editar grupo"; //# Add/ Edit Group
 $MSG['453'] = "Detalles de los ganadores";
 $MSG['454'] = "Subastas que ganaste";
 $MSG['455'] = "Ganador";
@@ -617,21 +633,21 @@ $MSG['504'] = "Comentar";
 $MSG['505'] = "Volver al perfil del usuario";
 $MSG['506'] = "enviada opinión a: ";
 $MSG['507'] = "Ocultar historial";
-$MSG['508'] = "mensajes nuevos";
+$MSG['508'] = "mensajes nuevos"; //# new messages
 $MSG['509'] = "Datos del usuario";
-$MSG['510'] = "Actualmente no hay avisos para mostrar.";
+$MSG['510'] = "Actualmente no hay avisos para mostrar."; //# There are currently no Reminders to display.
 $MSG['511'] = "Editar usuario";
 $MSG['512'] = "Editar subasta";
 $MSG['514'] = "<b>Precio de reserva no se ha encontrado</b>";
-$MSG['515'] = 'Activar Usuario';
+$MSG['515'] = "Activar Usuario";
 $MSG['516'] = "Gestión de Noticias";
 $MSG['517'] = " noticias encontradas en la base de datos";
 $MSG['518'] = "Añadir noticia";
 $MSG['519'] = "Título";
 $MSG['520'] = "Contenido";
 $MSG['521'] = "Activar";
-$MSG['522'] = "Tarifas de comprador a pagar";
-$MSG['523'] = "Valor final de tarifas a pagar";
+$MSG['522'] = "Tarifas de comprador a pagar"; //# Buyer fees due
+$MSG['523'] = "Valor final de tarifas a pagar"; //# "Final value fees due"
 $MSG['524'] = "AJUSTES";
 $MSG['525'] = "Gestión de usuarios Admin";
 $MSG['526'] = "Ajustes Generales";
@@ -646,11 +662,11 @@ $MSG['535'] = "El nombre de tu sitio web aparecerá en los mensajes de correo qu
 $MSG['536'] = "Esta debe ser la URL completa (a partir de <b>http://</b>) de tu instalacion WeBid.<br>Asegúrate de incluir la barra diagonal al final.";
 $MSG['537'] = "Selecciona <b>Sí</b> si deseas que la caja de ingreso se muestre a los usuarios en la página principal. De lo contrario, selecciona <b>No</b>";
 $MSG['538'] = "Selecciona <b>Sí</b> si deseas que la caja de noticias se muestre a los usuarios en la página principal. De lo contrario, selecciona <b>No</b>";
-$MSG['539'] = "Selecciónando <b>Sí</b> abajo hará WeBiD mostrar el texto que introduzcas en el campo de texto a continuación en la página de registro de usuarios justo antes del botón \"enviar\".<br>Se lo utiliza normalmente para mostrar algunas notas legales para usuarios a aceptar en el formulario de inscripción.";
+$MSG['539'] = "Selecciónando <b>Sí</b> abajo hará WeBiD mostrar el texto que introduzcas en el campo de texto a continuación en la página de registro de usuarios justo antes del botón \"enviar\".<br>Se lo utiliza normalmente para mostrar algunas notas legales para usuarios a aceptar en el formulario de inscripción."; //# "Selecting the <b>Yes</b> option below will make WeBid display the text you fill in the text box below in the users registration page just before the submit button.<br>This is typically used to display some legal notes users accept submitting the registration form."
 $MSG['540'] = "Admin e-mail";
 $MSG['541'] = "La dirección de e-mail de admin es utilizada para enviar mensajes de e-mail autómaticos";
 $MSG['542'] = "Ajustes generales actualizados";
-$MSG['543'] = "Hacer pública esta pregunta";
+$MSG['543'] = "Hacer pública esta pregunta"; //# Make this question public
 $MSG['544'] = "Formato moneda";
 $MSG['545'] = "Estilo EE.UU.: 1,250.00";
 $MSG['546'] = "Estilo Europeo: 1.250,00";
@@ -659,12 +675,12 @@ $MSG['548'] = "Dígitos decimales";
 $MSG['549'] = "Posición del símbolo";
 $MSG['550'] = "Antes de la cantidad (i.e. USD 200)";
 $MSG['551'] = "Después de la cantidad (i.e. 200 USD)";
-$MSG['552'] = "Preguntas";
+$MSG['552'] = "Preguntas"; //# Questions
 $MSG['553'] = "Ajustes de moneda actualizados";
 $MSG['554'] = "Número de noticias que quieres mostrar";
-$MSG['555'] = "Interrogador";
+$MSG['555'] = "Interrogador"; //# Asker
 $MSG['556'] = "Logo actual";
-$MSG['557'] = "Detalles del artículo";
+$MSG['557'] = "Detalles del artículo"; //# Item Details
 $MSG['558'] = "Creado";
 $MSG['559'] = "Ultimo login";
 $MSG['560'] = "Estado";
@@ -674,27 +690,28 @@ $MSG['563'] = "Si quieres cambiar la contraseña del usuario utiliza los dos cam
 $MSG['564'] = "Repetir contraseña";
 $MSG['566'] = "activo";
 $MSG['567'] = "no activo";
-$MSG['568'] = "y %s más";
+$MSG['568'] = "y %s más"; //# plus %s more
 $MSG['569'] = "Insertar usuario";
 $MSG['570'] = "Nunca se conectó";
-$MSG['578'] = "Puede vender";
-$MSG['579'] = "Puede comprar";
-$MSG['580'] = "Auto Ingreso";
-$MSG['581'] = "Diríjase por favor a una de las pasarelas de pago que figura a continuación para pagar al vendedor el importe de <b>%s</b>.";
-$MSG['582'] = "Diríjase por favor a una de las pasarelas de pago que figura a continuación para acreditar su cuenta de un valor de <b>%s</b>";
-$MSG['583'] = "Para activar su cuenta diríjase por favor a una de las pasarelas de pago que figura a continuación para pagar la tarifa de <b>%s</b>";
-$MSG['590'] = "Para finalizar la subasta por favor proceda a una de las pasarelas de pago que figura a continuación para pagar la tarifa de <b>%s</b>";
-$MSG['591'] = "Para finalizar la reventa por favor proceda a una de las pasarelas de pago que figura a continuación para pagar la tarifa de <b>%s</b>";
+$MSG['578'] = "Puede vender"; //# Can Sell
+$MSG['579'] = "Puede comprar"; //# Can Buy
+$MSG['580'] = "Auto Ingreso"; //# Auto Join
+$MSG['581'] = "Diríjase por favor a una de las pasarelas de pago que figura a continuación para pagar al vendedor el importe de <b>%s</b>."; //# Please proceed to one of the payment gateways listed below to pay the seller the amount of <b>%s</b>.
+$MSG['582'] = "Diríjase por favor a una de las pasarelas de pago que figura a continuación para acreditar su cuenta de un valor de <b>%s</b>"; //# Please proceed to one of the payment gateways listed below to credit your account by amount of <b>%s</b>.
+$MSG['583'] = "Para activar su cuenta diríjase por favor a una de las pasarelas de pago que figura a continuación para pagar la tarifa de <b>%s</b>"; //# To activate your account please proceed to one of the payment gateways listed below to pay the fee of <b>%s</b>.
+$MSG['590'] = "Para finalizar la subasta por favor proceda a una de las pasarelas de pago que figura a continuación para pagar la tarifa de <b>%s</b>"; //# To finalise your auction please proceed to one of the payment gateways listed below to pay the fee of <b>%s</b>.
+$MSG['591'] = "Para finalizar la reventa por favor proceda a una de las pasarelas de pago que figura a continuación para pagar la tarifa de <b>%s</b>"; //# To finalise the relisting your auction(s) please proceed to one of the payment gateways listed below to pay the fee of <b>%s</b>.
 $MSG['592'] = "Conectado como:";
-$MSG['593'] = "Recordatorios";
-$MSG['594'] = "Texto aceptación";
+$MSG['593'] = "Recordatorios"; //# Reminders
+$MSG['594'] = "Texto aceptación"; //# "Acceptance text"
+$MSG['596'] = "Color de los enlaces visitados";
 $MSG['597'] = "Activar el soporte de banners?";
 $MSG['600'] = "Ajustes de banners actualizados";
 $MSG['602'] = "Subir un nuevo logo (max. 50 KB)";
 $MSG['603'] = "Recibir Newsletter?";
 $MSG['604'] = "Si activas esta opción, los usuarios serán capaces de suscribirse a tus newsletter desde la página de registro.<br>La \"Gestión de Newsletter\" te permitirá enviar mensajes de e-mail messages a los usuarios suscritos";
 $MSG['605'] = "Cuerpo del Mensaje";
-$MSG['606'] = "Al hacer clic en 'guardar' los cambios en el boletín se enviarán a todos los usuarios que se inscribieron para recibir el boletín en el grupo seleccionado.";
+$MSG['606'] = "Al hacer clic en 'guardar' los cambios en el boletín se enviarán a todos los usuarios que se inscribieron para recibir el boletín en el grupo seleccionado."; //# "By clicking save changes the newsletter will be sent to all of the users who are signed up to receive the newsletter in the selected group."
 $MSG['607'] = "Newsletter Submission";
 $MSG['608'] = "Te gustaria recibir nuestro Newsletter?";
 $MSG['609'] = "Marque NO para desinscribirse a nuestro Newsletter";
@@ -708,7 +725,6 @@ $MSG['616'] = "Guardar Miniatura";
 $MSG['617'] = "*NOTA*  Si quieres cambiar tu contraseña utiliza los campos siguientes.<br>De los contrario déjalos en blanco.";
 $MSG['618'] = "Cancelar";
 $MSG['619'] = "Subastas Abiertas";
-$MSG['619a'] = "Todas las subastas";
 $MSG['620'] = "Tus pujas";
 $MSG['621'] = "Editar tu perfil personal";
 $MSG['622'] = "Mi panel de control";
@@ -731,19 +747,19 @@ $MSG['648'] = "Responder a preguntas";
 $MSG['649'] = "Respuesta:";
 $MSG['650'] = "Pregunta:";
 $MSG['651'] = "Pregunta sobre su subasta: %s";
-$MSG['661'] = "Agrega galería de imágenes";
 $MSG['662'] = "<h2>Crear miniatura</h2>";
 $MSG['663'] = "Galería de Fotos";
 $MSG['664'] = "Si activa esta opción, los vendedores serán capaces de subir fotos adicionales hasta el máximo que especifiques (véase más adelante).";
 $MSG['665'] = "Activar Galería de Fotos?";
 $MSG['666'] = "Max. Número de fotos";
-$MSG['667'] = "Usuario mirando:";
-$MSG['668'] = "Esta subasta no ha comenzado todavía.";
+$MSG['667'] = "Usuario mirando:"; //# Viewing user: 
+$MSG['668'] = "Esta subasta no ha comenzado todavía."; //# This auction has not yet started.
 $MSG['671'] = "Max. tamaño de fotos";
 $MSG['672'] = "kilobytes";
 $MSG['673'] = "Puedes cargar hasta ";
 $MSG['674'] = "fotos.";
 $MSG['675'] = "Se te cobrará ";
+$MSG['676'] = "por cada foto que cargues.";
 $MSG['677'] = "Cargar Fotos";
 $MSG['678'] = "Cerrar";
 $MSG['679'] = "Por favor, sigue los siguientes pasos.";
@@ -762,187 +778,188 @@ $MSG['699'] = "Tu puja de ";
 $MSG['700'] = " ha sido ingresada. ";
 $MSG['701'] = " Tu puja no fue suficiente para hacerte el mejor postor! <br> ¿Te gustaría volver a pujar?";
 $MSG['718'] = "Tipo Subasta";
-$MSG['719'] = "Detalles de pago";
-$MSG['720'] = "Dirección de correo electrónico PayPal";
+$MSG['719'] = "Detalles de pago"; //# Payment Details
+$MSG['720'] = "Dirección de correo electrónico PayPal"; //# PayPal Email Address
 $MSG['724'] = "Información Adicional";
-$MSG['725'] = "Optimización";
-$MSG['726'] = "Habilitar cache de plantillas";
-$MSG['727'] = "Esto masivamente aumentará la velocidad de su sitio. Se recomienda sólo deshabilitarlo cuando esté haciendo cambios a las plantillas";
-$MSG['728'] = "Configuraciónes de optimización han sido actualizadas";
-$MSG['729'] = "Establecer el tipo de pago";
-$MSG['730'] = "Así es como los usuarios pagarán las tarifas. El modo de equilibrio es cuando los usuarios pueden elegir el momento de pagar, y el modo inmediato es donde el usuario debe pagar por cada acción que tiene una tarifa";
-$MSG['731'] = "Modo de equilibrio";
-$MSG['732'] = "Pagos inmediato";
-$MSG['733'] = "Los siguientes ajustes sólo se utilizan en modo de equilibrio";
-$MSG['734'] = "Deuda maxima";
-$MSG['735'] = "La deuda máxima que una cuenta puede tener antes de que se debe pagar";
-$MSG['736'] = "Crédito de inscripción";
-$MSG['737'] = "El crédito otorgado a una cuenta en su creación";
-$MSG['738'] = "Suspender Cuentas";
-$MSG['739'] = "Suspender las cuentas que están por encima del límite de débito";
-$MSG['740'] = "Ninguno";
-$MSG['741'] = "Imagen";
+$MSG['725'] = "Optimización"; //# Optimisation
+$MSG['726'] = "Habilitar cache de plantillas"; //# Enable template cache
+$MSG['727'] = "Esto masivamente aumentará la velocidad de su sitio. Se recomienda sólo deshabilitarlo cuando esté haciendo cambios a las plantillas"; //# This will massively increase the speed of your site. It is recommended this is only disabled when making updates to your template
+$MSG['728'] = "Configuraciónes de optimización han sido actualizadas"; //# Optimisation settings updated
+$MSG['729'] = "Establecer el tipo de pago"; //# Set payment type
+$MSG['730'] = "Así es como los usuarios pagarán las tarifas. El modo de equilibrio es cuando los usuarios pueden elegir el momento de pagar, y el modo inmediato es donde el usuario debe pagar por cada acción que tiene una tarifa"; //# This is how users will pay the fees. Balance mode is where the users can choose when to pay and live payments is where the user must pay for every action that has a fee
+$MSG['731'] = "Modo de equilibrio"; //# Balance mode
+$MSG['732'] = "Pagos inmediato"; //# Live payments
+$MSG['733'] = "Los siguientes ajustes sólo se utilizan en modo de equilibrio"; //# The following settings are only used when in balance mode
+$MSG['734'] = "Deuda maxima"; //# Maximum Debt
+$MSG['735'] = "La deuda máxima que una cuenta puede tener antes de que se debe pagar"; //# The maximum debt an account can have before they must pay it back
+$MSG['736'] = "Crédito de inscripción"; //# Signup Credit
+$MSG['737'] = "El crédito otorgado a una cuenta en su creación"; //# The credit given to an account on its creation
+$MSG['738'] = "Suspender Cuentas"; //# Suspend Accounts
+$MSG['739'] = "Suspender las cuentas que están por encima del límite de débito"; //# Suspend Accounts that are over the Debit Limit
+$MSG['740'] = "Ninguno"; //# None
+$MSG['741'] = "Imagen"; //# Image
 $MSG['742'] = "reCaptcha";
-$MSG['743'] = "Tipo de captcha en la página de registro";
-$MSG['744'] = "Tipo de captcha para la página `envie a un amigo'";
-$MSG['745'] = "Captcha se utilizan para evitar spam. Generalmente es una buena idea activar algun tipo de captcha";
-$MSG['746'] = "Clave pública de reCaptcha";
-$MSG['747'] = "Clave privada de reCaptcha";
-$MSG['748'] = 'Para utilizar reCaptcha debe crear una cuenta en <a href="http://recaptcha.net/" class="new-window">http://recaptcha.net/</a> y pedir claves para el dominio deste sitio';
-$MSG['749'] = 'Configuración de spam';
-$MSG['750'] = 'Configuración de spam actualizados';
-$MSG['751'] = 'No se puede utilizar reCaptcha sin las dos claves';
-$MSG['752'] = 'El texto introducido para la verificación de la imagen no coincide con lo que se muestra.';
-$MSG['753'] = 'Cuenta Suspendida';
-$MSG['754'] = 'Has llegado al límite de la deuda permitida en su cuenta, su cuenta será suspendida hasta que la deuda se ha cancelada';
-$MSG['755'] = 'Pago';
-$MSG['756'] = 'Pagar ahora';
-$MSG['757'] = 'Código de Seguridad';
-$MSG['758'] = 'Verificar código';
-$MSG['759'] = 'Habilitar';
-$MSG['760'] = 'Desactivar';
-$MSG['761'] = 'Configuración de tarifas actualizada';
-$MSG['762'] = 'Configuración de pasarelas de pago actualizada';
-$MSG['763'] = 'Balance';
-$MSG['764'] = 'Enviar recordatorio de pago';
-$MSG['765'] = 'Recordatorio de pago enviado';
-$MSG['766'] = 'Factura';
-$MSG['767'] = 'Haga clic en el botón a la derecha para continuar con PayPal';
-$MSG['768'] = 'Tarifa de Inscripción';
-$MSG['769'] = 'Pagar tarifa de cotización';
-$MSG['770'] = 'Pagar tarifa de reventa';
-$MSG['771'] = 'Nombre por defecto';
-$MSG['772'] = 'Traducción';
-$MSG['773'] = 'Nombre de usuario para Authorize.net';
-$MSG['774'] = 'Clave de transacciones para Authorize.net';
-$MSG['775'] = 'Cargo de Comprador';
-$MSG['776'] = "Para finalizar la venta diríjase por favor a una de las pasarelas de pago que figura a continuación para pagar la tarifa de <b>%s</b>.";
-$MSG['777'] = 'Usted tiene un pago pendiente de la tasa de compradores para el artículo %s, su cuenta será suspendida hasta que se realice el pago. Usted puede pagarlo <a href="%s">Aquí</a>';
-$MSG['778'] = 'Si usted desea pagar a través de un método alternativo, por favor contacte <a href="profile.php?user_id=%s">%s</a> para averiguar cómo.';
-$MSG['779'] = 'Campos de Registro de Usuario Actualizados';
-$MSG['780'] = 'Mostrar en la Página de Inscripción';
-$MSG['781'] = 'Campo de cumpleaños obligatório?';
-$MSG['782'] = 'Campo de dirección obligatório?';
-$MSG['783'] = 'Campo de la ciudad obligatório?';
-$MSG['784'] = 'Campo de estado/provincia obligatório?';
-$MSG['785'] = 'Campo de país obligatório?';
-$MSG['786'] = 'Campo de código postal obligatório?';
-$MSG['787'] = 'Campo de teléfono obligatório?';
-$MSG['788'] = 'Configuración de pantalla';
-$MSG['789'] = 'Número de resultados mostrados por página';
-$MSG['790'] = 'El número máximo de elementos antes de un salto de página';
-$MSG['791'] = 'Tasa para Precio Final';
-$MSG['792'] = 'Usted tiene que pagar por %s artículo(s)';
-$MSG['793'] = ' artículos en que usted pujó terminarán luego';
-$MSG['794'] = 'Sus ofertas han sido superados en %s artículos';
-$MSG['795'] = 'Configuración de Pantalla Actualizado';
-$MSG['796'] = 'Usted tiene un pago de tasa pendiente para el artículo %s; su cuenta será suspendida hasta que se realice el pago. Usted puede pagar ahora <a href="%s">aquí</a>';
-$MSG['797'] = 'Habilitar subtítulos';
-$MSG['798'] = 'Permite vendedores a agregar un subtítulo a su subasta que aparecerá en todas las listas de subastas';
-$MSG['799'] = 'Habilitar Categoría Secundaria';
-$MSG['800'] = 'Permite vendedores a agregar su subasta a varias categorías';
-$MSG['801'] = 'URL de SSL compartido';
-$MSG['802'] = 'Si usted estea usando SSL compartido, introduzca la URL aquí';
-$MSG['803'] = 'Tarifa para Subtítulo';
-$MSG['804'] = 'Tarifa para Categoría Extra';
-$MSG['805'] = 'Omitir paso';
-$MSG['806'] = 'Subtítulo del artículo';
-$MSG['807'] = 'Configuración de Portada ';
-$MSG['808'] = 'Este es el tamaño de la miniatura que aparece en las listas de subastas, como cuando un usuario hace una búsqueda';
-$MSG['809'] = 'Un campo se debe demostrar si sea un campo requerido';
-$MSG['810'] = 'Se necesita una dirección de correo electrónico de PayPal válida';
-$MSG['811'] = 'Se necesita una identificación y contraseña válida de AuthNet';
-$MSG['812'] = 'Nombre del archivo:';
-$MSG['813'] = 'Contenido del archivo:';
-$MSG['814'] = 'Segunda categoría';
-$MSG['815'] = '¿Está seguro que desea activar este usuario?';
-$MSG['816'] = 'Galería';
-$MSG['817'] = 'Precios';
-$MSG['818'] = 'Usted no tiene permiso para elementos de la lista';
-$MSG['819'] = 'Usted no tiene permiso para comprar artículos';
-$MSG['820'] = 'Pedido para permiso de venta';
-$MSG['821'] = 'Una identificación válida de 2Checkout es necesario';
-$MSG['822'] = 'Una dirección de correo electrónico válido de Moneybookers es necesario';
-$MSG['823'] = 'Una identificación válida de Worldpay es necesario';
-$MSG['824'] = 'Worldpay ID';
-$MSG['825'] = 'Dirección de correo electrónico Moneybookers';
-$MSG['826'] = 'Identificación 2Checkout';
-$MSG['827'] = 'Informe semanal';
-$MSG['828'] = 'Semana';
-$MSG['829'] = 'Visto por';
-$MSG['830'] = 'Mes';
-$MSG['831'] = 'No hay direcciones IP baneadas hasta el momento ';
-$MSG['832'] = '¿Está seguro que desea eliminar la noticia "%s"';
-$MSG['833'] = '¿Está seguro que desea eliminar la subasta "%s"';
-$MSG['834'] = '¿Está seguro que desea eliminar este mensaje (ID: %s)';
-$MSG['835'] = '¿Está seguro que desea eliminar el usuario "%s"';
-$MSG['836'] = 'Tipos de Miembros Actualizados';
-$MSG['837'] = '(contiene %s preguntas frecuentes)';
-$MSG['838'] = '¿Está seguro que desea procesar las siguientes categorías:';
-$MSG['839'] = '¿Qué quieres hacer con las preguntas más frecuentes en las siguientes categorías';
-$MSG['840'] = 'Mover a';
-$MSG['841'] = 'Plantillas de administración';
-$MSG['842'] = 'Tarifas estipulados';
-$MSG['843'] = '¿Qué quieres hacer con las subastas y subcategorías en las siguientes categorías?<br><small>(Si desea moverlos, debe introducir la ID de categoría donde desea que sean movidos)</small>';
-$MSG['844'] = 'Algunas categorías seleccionadas para mover no puden ser procesadas como no fue dada ningúna ID válida de categoría a donde moverlos';
-$MSG['845'] = '<p><img src="' . $system->SETTINGS['siteurl'] . 'themes/admin/images/bullet_blue.png"> Shows a category that contains children categories</p><p><img src="' . $system->SETTINGS['siteurl'] . 'themes/admin/images/bullet_red.png"> Shows a category that contains auctions</p>';
-$MSG['846'] = 'Saldo de Cuenta';
-$MSG['847'] = 'Precio';
-$MSG['848'] = '¿Está seguro que desea eliminar los comentarios de usuarios (ID: %s)';
-$MSG['849'] = 'Habilitar Volver a Vender Automatico';
-$MSG['850'] = 'Permitir a los usuarios que automáticamente vuelvan sus subastas a vender si terminen sin un ganador';
-$MSG['851'] = 'Máximo Reventas';
-$MSG['852'] = 'Establecer el número máximo de veces que una subasta puede ser puesta en venta automáticamente';
-$MSG['853'] = 'Usted no está viendo ningún producto';
-$MSG['854'] = 'Cuentas';
-$MSG['855'] = 'Elija Vista';
-$MSG['856'] = 'Seleccione Período';
-$MSG['857'] = 'Total Facturado';
-$MSG['858'] = 'I have read and agree to the <a href="' . $system->SETTINGS['siteurl'] . 'contents.php?show=terms">Terms and Conditions</a>';
-$MSG['859'] = 'Thank you %s for Registering.';
-$MSG['016'] = 'Registro completo. Tus datos han sido recibidos.<br>Un e-mail de confirmación ha sido enviado a: <i>%s</i>';
-$MSG['016_a'] = "Registro completo. Tus datos han sido recibidos.<br>El administrador del en breve revisará tu cuenta, una vez tu cuenta haya sido aprobada por el administrador podrás ingresar";
-$MSG['016_b'] = "Registro completo. Tus datos han sido recibidos.<br>Puedes ahora ingresar usando tu nombre de usuario y contraseña.";
-$MSG['860'] = '<p>In the meantime here are some tips to get you started with ' . $system->SETTINGS['sitename'] . '.</p>
+$MSG['743'] = "Tipo de captcha en la página de registro"; //# Captcha type on registration page
+$MSG['744'] = "Tipo de captcha para la página `envie a un amigo'"; //# Captcha type on send auction to friend page
+$MSG['745'] = "Captcha se utilizan para evitar spam. Generalmente es una buena idea activar algun tipo de captcha"; //# Captcha are used to prevent spam it is generally a good idea to enable some sort of captcha
+$MSG['746'] = "Clave pública de reCaptcha"; //# Recaptcha public key
+$MSG['747'] = "Clave privada de reCaptcha"; //# Recaptcha private key
+$MSG['748'] = "Para utilizar reCaptcha debe crear una cuenta en <a href=\"http://recaptcha.net/\" class=\"new-window\">http://recaptcha.net/</a> y pedir claves para el dominio deste sitio"; //# To use reCaptcha you must create an account at <a href=\"http://recaptcha.net/\" class=\"new-window\">http://recaptcha.net/</a> and request keys for the domain this site is sitting
+$MSG['749'] = "Configuración de spam"; //# Spam settings
+$MSG['750'] = "Configuración de spam actualizados"; //# Spam settings updated
+$MSG['751'] = "No se puede utilizar reCaptcha sin las dos claves"; //# You cannot use reCaptcha without the two keys
+$MSG['752'] = "El texto introducido para la verificación de la imagen no coincide con lo que se muestra."; //# The string you entered for the image verification did not match what was displayed.
+$MSG['753'] = "Cuenta Suspendida"; //# Account Suspended
+$MSG['754'] = "Has llegado al límite de la deuda permitida en su cuenta, su cuenta será suspendida hasta que la deuda se ha cancelada"; //# You have reached the debt limit allowed on your account; your account will be suspended until this is paid back
+$MSG['755'] = "Pago"; //# Paid
+$MSG['756'] = "Pagar ahora"; //# Pay Now
+$MSG['757'] = "Código de Seguridad"; //# Security Code
+$MSG['758'] = "Verificar código"; //# Verify Code
+$MSG['759'] = "Habilitar"; //# Enable
+$MSG['760'] = "Desactivar"; //# Disable
+$MSG['761'] = "Configuración de tarifas actualizada"; //# Fee Settings Updated
+$MSG['762'] = "Configuración de pasarelas de pago actualizada"; //# Fee Gateway Settings Updated
+$MSG['763'] = "Balance"; //# Balance
+$MSG['764'] = "Enviar recordatorio de pago"; //# Send payment reminder
+$MSG['765'] = "Recordatorio de pago enviado"; //# Payment reminder sent
+$MSG['766'] = "Factura"; //# Invoice
+$MSG['767'] = "Haga clic en el botón a la derecha para continuar con PayPal"; //# Click on the button on the right to proceed to PayPal
+$MSG['768'] = "Tarifa de Inscripción"; //# Signup Fee
+$MSG['769'] = "Pagar tarifa de cotización"; //# Pay listing fee
+$MSG['770'] = "Pagar tarifa de reventa"; //# Pay relist fee
+$MSG['771'] = "Nombre por defecto"; //# Default Name
+$MSG['772'] = "Traducción"; //# Translation
+$MSG['773'] = "Nombre de usuario para Authorize.net"; //# Authorize.net Login ID
+$MSG['774'] = "Clave de transacciones para Authorize.net"; //# Authorize.net Transaction Key
+$MSG['775'] = "Cargo de Comprador"; //# Buyer Fee
+$MSG['776'] = "Para finalizar la venta diríjase por favor a una de las pasarelas de pago que figura a continuación para pagar la tarifa de <b>%s</b>."; //# To finalise the sale please proceed to one of the payment gateways listed below to pay the fee of <b>%s</b>.
+$MSG['777'] = "Usted tiene un pago pendiente de la tasa de compradores para el artículo %s, su cuenta será suspendida hasta que se realice el pago. Usted puede pagarlo <a href=\"%s\">Aquí</a>"; //# You have an outstanding payment of the buyers fee for the item %s; your account will be suspended until this is paid. You can pay for this now at <a href=\"%s\">Here</a>
+$MSG['778'] = "Si usted desea pagar a través de un método alternativo, por favor contacte <a href=\"profile.php?user_id=%s\">%s</a> para averiguar cómo."; //# If you wish to pay via an alternative method contact <a href=\"profile.php?user_id=%s\">%s</a> to find out how.
+$MSG['779'] = "Campos de Registro de Usuario Actualizados"; //# 'User Registration Fields Updated'
+$MSG['780'] = "Mostrar en la Página de Inscripción"; //# 'Show On Registration Page'
+$MSG['781'] = "Campo de cumpleaños obligatório?"; //# 'Birthday Field Required?'
+$MSG['782'] = "Campo de dirección obligatório?"; //# 'Address Field Required?'
+$MSG['783'] = "Campo de la ciudad obligatório?"; //# 'City Field Required?'
+$MSG['784'] = "Campo de estado/provincia obligatório?"; //# 'State/Province Field Required?'
+$MSG['785'] = "Campo de país obligatório?"; //# 'Country Field Required?'
+$MSG['786'] = "Campo de código postal obligatório?"; //# 'Zip/Post Code Field Required?'
+$MSG['787'] = "Campo de teléfono obligatório?"; //# 'Telephone Field Required?'
+$MSG['788'] = "Configuración de pantalla"; //# 'Display Settings'
+$MSG['789'] = "Número de resultados mostrados por página"; //# 'Results shown per page'
+$MSG['790'] = "El número máximo de elementos antes de un salto de página"; //# 'The maximum number of items before a page break'
+$MSG['791'] = "Tasa para Precio Final"; //# 'Final Price Fee'
+$MSG['792'] = "Usted tiene que pagar por %s artículo(s)"; //# 'You need to pay for %s item(s)'
+$MSG['793'] = " artículos en que usted pujó terminarán luego"; //# ' items you're bidding on are ending soon'
+$MSG['794'] = "Sus ofertas han sido superados en %s artículos"; //# 'You have been outbid on %s items'
+$MSG['795'] = "Configuración de Pantalla Actualizado"; //# 'Display Settings Updated'
+$MSG['796'] = "Usted tiene un pago de tasa pendiente para el artículo %s; su cuenta será suspendida hasta que se realice el pago. Usted puede pagar ahora <a href=\"%s\">aquí</a>"; //# 'You have an outstanding payment of the final value fee for the item %s; your account will be suspended until this is paid. You can pay for this now at <a href="%s">Here</a>'
+$MSG['797'] = "Habilitar subtítulos"; //# 'Enable subtitles'
+$MSG['798'] = "Permite vendedores a agregar un subtítulo a su subasta que aparecerá en todas las listas de subastas"; //# 'Allows sellers to add a subtitle to thier auction which will appear on all auction lists'
+$MSG['799'] = "Habilitar Categoría Secundaria"; //# 'Enable Secondary Category'
+$MSG['800'] = "Permite vendedores a agregar su subasta a varias categorías"; //# 'Allows sellers to add their auction to multiple categories'
+$MSG['801'] = "URL de SSL compartido"; //# 'Shared SSL URL'
+$MSG['802'] = "Si usted estea usando SSL compartido, introduzca la URL aquí"; //# 'If you're using shared SSL enter the URL here'
+$MSG['803'] = "Tarifa para Subtítulo"; //# 'Subtitle Fee'
+$MSG['804'] = "Tarifa para Categoría Extra"; //# 'Extra Category Fee'
+$MSG['805'] = "Omitir paso"; //# 'Skip step'
+$MSG['806'] = "Subtítulo del artículo"; //# 'Item subtitle'
+$MSG['807'] = "Configuración de Portada "; //# 'Front Page Settings'
+$MSG['808'] = "Este es el tamaño de la miniatura que aparece en las listas de subastas, como cuando un usuario hace una búsqueda"; //# 'This is the size of the thumbnail that will appear on lists of auctions such as when a user does a search'
+$MSG['809'] = "Un campo se debe demostrar si sea un campo requerido"; //# 'A field must be shown if it's a required field'
+$MSG['810'] = "Se necesita una dirección de correo electrónico de PayPal válida"; //# 'A vaild PayPal email address is required'
+$MSG['811'] = "Se necesita una identificación y contraseña válida de AuthNet"; //# 'A vaild AuthNet id and password are required'
+$MSG['812'] = "Nombre del archivo:"; //# 'File Name:'
+$MSG['813'] = "Contenido del archivo:"; //# 'File Content:'
+$MSG['814'] = "Segunda categoría"; //# 'Second Category'
+$MSG['815'] = "¿Está seguro que desea activar este usuario?"; //# 'Are you sure you want to activate this user?'
+$MSG['816'] = "Galería"; //# 'Gallery'
+$MSG['817'] = "Precios"; //# 'Prices'
+$MSG['818'] = "Usted no tiene permiso para elementos de la lista"; //# 'You do not have permission to list items'
+$MSG['819'] = "Usted no tiene permiso para comprar artículos"; //# 'You do not have permission to buy items'
+$MSG['820'] = "Pedido para permiso de venta"; //# 'Account selling permission request'
+$MSG['821'] = "Una identificación válida de 2Checkout es necesario"; //# 'A vaild 2Checkout id is required'
+$MSG['822'] = "Una dirección de correo electrónico válido de Moneybookers es necesario"; //# 'A vaild Moneybookers email address is required'
+$MSG['823'] = "Una identificación válida de Worldpay es necesario"; //# 'A vaild Worldpay id is required'
+$MSG['824'] = "Worldpay ID"; //# 'Worldpay ID'
+$MSG['825'] = "Dirección de correo electrónico Moneybookers"; //# 'Moneybookers Email Address'
+$MSG['826'] = "Identificación 2Checkout"; //# '2Checkout ID'
+$MSG['827'] = "Informe semanal"; //# 'Weekly Report'
+$MSG['828'] = "Semana"; //# 'Week'
+$MSG['829'] = "Visto por"; //# 'View by '
+$MSG['830'] = "Mes"; //# 'Month'
+$MSG['831'] = "No hay direcciones IP baneadas hasta el momento "; //# 'No IP addresses have been banned as of yet.'
+$MSG['832'] = "¿Está seguro que desea eliminar la noticia \"%s\""; //# 'Are you sure you want to delete the news item \'%s\''
+$MSG['833'] = "¿Está seguro que desea eliminar la subasta \"%s\""; //# 'Are you sure you want to delete the auction \'%s\''
+$MSG['834'] = "¿Está seguro que desea eliminar este mensaje (ID: %s)"; //# 'Are you sure you want to delete this message (ID: %s)'
+$MSG['835'] = "¿Está seguro que desea eliminar el usuario \"%s\""; //# 'Are you sure you want to delete the user \'%s\''
+$MSG['836'] = "Tipos de Miembros Actualizados"; //# 'Membertypes Updated'
+$MSG['837'] = "(contiene %s preguntas frecuentes)"; //# '(contains %s FAQs)'
+$MSG['838'] = "¿Está seguro que desea procesar las siguientes categorías:"; //# 'Are you sure you want to process the following categories: '
+$MSG['839'] = "¿Qué quieres hacer con las preguntas más frecuentes en las siguientes categorías"; //# 'What do you want to do with the FAQs in the following categories'
+$MSG['840'] = "Mover a"; //# 'Move to '
+$MSG['841'] = "Plantillas de administración"; //# 'Admin Templates'
+$MSG['842'] = "Tarifas estipulados"; //# 'Set Fees'
+$MSG['843'] = "¿Qué quieres hacer con las subastas y subcategorías en las siguientes categorías?<br><small>(Si desea moverlos, debe introducir la ID de categoría donde desea que sean movidos)</small>"; //# 'What do you want to do with the auctions & subcategories in the following categories<br><small>(If you want to move them you must enter the category id of where you want them moved)</small>'
+$MSG['844'] = "Algunas categorías seleccionadas para mover no puden ser procesadas como no fue dada ningúna ID válida de categoría a donde moverlos"; //# 'Some categories selected to move could not be processed as no category ID was given to where they would be moved to'
+$MSG['845'] = "<p><img src=\"" . $system->SETTINGS['siteurl'] . "themes/admin/images/bullet_blue.png\"> Muestra una categoría que contiene subcategorías</p><p><img src=\"" . $system->SETTINGS['siteurl'] . "themes/admin/images/bullet_red.png\"> Muestra una categoría que contiene subastas</p>"; //# '<p><img src="' . $system->SETTINGS['siteurl'] . 'themes/admin/images/bullet_blue.png"> Shows a category that contains children categories</p><p><img src="' . $system->SETTINGS['siteurl'] . 'themes/admin/images/bullet_red.png"> Shows a category that contains auctions</p>'
+$MSG['846'] = "Saldo de Cuenta"; //# 'Account Balance'
+$MSG['847'] = "Precio"; //# 'Price'
+$MSG['848'] = "¿Está seguro que desea eliminar los comentarios de usuarios (ID: %s)"; //# 'Are you sure you want to delete the user feedback (ID: %s)'
+$MSG['849'] = "Habilitar Volver a Vender Automatico"; //# 'Enable Auto-Relist'
+$MSG['850'] = "Permitir a los usuarios que automáticamente vuelvan sus subastas a vender si terminen sin un ganador"; //# 'Allow users to automatically relist auctions if they end without a winner'
+$MSG['851'] = "Máximo Reventas"; //# 'Max Relists'
+$MSG['852'] = "Establecer el número máximo de veces que una subasta puede ser puesta en venta automáticamente"; //# 'Set the maximum times an auction can be automatically relisted'
+$MSG['853'] = "Usted no está viendo ningún producto"; //# 'You are not currently watching any items'
+$MSG['854'] = "Cuentas"; //# 'Accounts'
+$MSG['855'] = "Elija Vista"; //# 'Choose View'
+$MSG['856'] = "Seleccione Período"; //# 'Select Period'
+$MSG['857'] = "Total Facturado"; //# 'Total Invoiced'
+$MSG['858'] = 'He leído y estoy de acuerdo con la <a href="' . $system->SETTINGS['siteurl'] . 'contents.php?show=terms" target="_blank">Terms and Conditions</a>';
+$MSG['859'] = 'Gracias por registrarse %s.';
+$MSG['016'] = 'Hemos enviado un correo electrónico de confirmación a %s. Este correo electrónico contiene un enlace de activación para confirmar tu dirección de correo electrónico, simplemente haga clic en el enlace para activar su cuenta %s.';
+$MSG['016_a'] = "El sitio admin próximamente revise su cuenta, una vez que su cuenta haya sido aceptada por el administrador, usted será capaz de iniciar sesión";
+$MSG['016_b'] = "Ahora puede iniciar sesión con su nombre de usuario y la contraseña.";
+$MSG['860'] = '<p>En el ínterin, he aquí algunos consejos que le ayudarán a empezar con ' . $system->SETTINGS['sitename'] . '.</p>
 <ul>
-  <li>Have photos ready when listing an item to sell, reduce the filesize to save time when uploading.</li>
-  <li>Featured auctions are much more likely to sell, your auction will be randomly featured on the ' . $system->SETTINGS['sitename'] . ' Home page.</li>
+<li>Tienen fotos listo cuando un listado de un elemento para vender, reducir el tamaño de archivo para ahorrar tiempo al cargar.</li>
+<li>subastas destacados son mucho más propensos a vender, la subasta será de forma aleatoria en la portada ' . $Sistema->Configuración['sitename'] . ' página de inicio.</li>
 </ul>';
-$MSG['861'] = 'Search auctions';
-$MSG['862'] = 'Login to continue';
-$MSG['863'] = '<h2>Aun no te has registrado?</h2>
-        <h3><a href="register.php">Registrate ahora</a><br>
-        Solo te tomara un minuto</h3>
-        <p> Como usuario registrado podras:</p>
-        <ul>
-            <li>Vender</li>
-            <li>Ser notificado cuando alguien publica el articulo que estas buscando</li>
-            <li>Agregar productos a tu lista de deseos</li>
-            <li>Comprar en el Tianguis</li>
-            <li>y muchas mas cosas interesantes</li>
-        </ul>';
-$MSG['864'] = 'Detalles del envio';
-$MSG['865'] = 'Detalles de la publicacion';
-$MSG['867'] = 'No manejo envios, solamente pueden pasar aqui a recoger sus productos';
-$MSG['868'] = 'cada uno (a)';
-$MSG['869'] = 'Sale Date';
+$MSG['861'] = 'Buscar artículos';
+$MSG['862'] = 'Login para continuar';
+$MSG['863'] = '<h2>¿Aún no eres miembro?</h2>
+<h3><a href="register.php">Regístrese ahora</a><br>
+sólo le llevará un minuto</h3>
+<p> Ser miembro le permite:</p>
+<ul>
+<li>Vender nada</li>
+<li>ser notificado cuando un tema que usted está buscando se encuentra</li>
+<li>Añadir artículos a su lista de favoritos</li>
+<li>pujar por artículos</li>
+<li>mucho más</li>
+</ul>';
+$MSG['864'] = 'envío';
+$MSG['865'] = 'detalles del anuncio';
+$MSG['867'] = 'sólo recogida';
+$MSG['868'] = 'cada';
+$MSG['869'] = 'Sale Fecha';
+$MSG['870'] = 'habéis vendido %s elementos';
 
-$MSG['888'] = 'Registro de errores está vacía';
-$MSG['889'] = "Registro de errores purgado";
-$MSG['890'] = "Purga registro";
-$MSG['891'] = "Registro de errores";
-$MSG['892'] = "Para ser activado";
+$MSG['888'] = "Registro de errores está vacía"; //# Error log is currently empty
+$MSG['889'] = "Registro de errores purgado"; //# Error Log Purged
+$MSG['890'] = "Purga registro"; //# Purge Log
+$MSG['891'] = "Registro de errores"; //# Error Log
+$MSG['892'] = "Para ser activado"; //# To be activated
 $MSG['893'] = "Total";
-$MSG['894'] = "Configuración de usuario";
-$MSG['895'] = "Configuración de usuario actualizada";
-$MSG['896'] = "Este es el tamaño de la miniatura que aparece en la lista de subastas";
-$MSG['897'] = "Opciones adicionales para subasta";
+$MSG['894'] = "Configuración de usuario"; //# User Settings
+$MSG['895'] = "Configuración de usuario actualizada"; //# User Settings Updated
+$MSG['896'] = "Este es el tamaño de la miniatura que aparece en la lista de subastas"; //# This is the size of the thumbnail that will appear on the auctions listing page
+$MSG['897'] = "Opciones adicionales para subasta"; //# Additional auction options
 $MSG['898'] = "Pago";
-$MSG['899'] = "Establecer como pago";
-$MSG['900'] = "Ver ganadores";
+$MSG['899'] = "Establecer como pago"; //# Set as Paid
+$MSG['900'] = "Ver ganadores"; //# View Winners
 $MSG['901'] = "Número de artículos";
 $MSG['902'] = "HTML";
-$MSG['903'] = "¿En qué formato desea recibir su correo electrónico?";
+$MSG['903'] = "¿En qué formato desea recibir su correo electrónico?"; //# In which format do you want to receive your emails
 $MSG['904'] = "Esta subasta está cerrada";
 $MSG['905'] = "Alguien Quiere Comprobar Una Subasta";
 $MSG['906'] = "Tu Puja No Es Superior a La Ganadora";
@@ -972,25 +989,9 @@ $MSG['929'] = "Artículos Populares";
 $MSG['930'] = "Artículos Calientes";
 $MSG['931'] = "Comprar Ahora";
 $MSG['932'] = "Listas publicadas por %s";
-$MSG['933'] = "Sólo ¡Cómpralo ya!";
-$MSG['934'] = "del usuario:";
-$MSG['935'] = 'Balanza de Pagos';
-$MSG['936'] = 'Some error has occurred with your submission please try again';
-$MSG['937'] = "Falta el nombre";
-$MSG['938'] = "El nombre es obligatorio";
-$MSG['939'] = "La contraseña es obligatoria";
-$MSG['940'] = "Please enter your password twice";
-$MSG['941'] = "La dirección de correo electrónico  es obligatoria";
-$MSG['942'] = "La dirección es obligatoria";
-$MSG['943'] = "La ciudad es obligatoria";
-$MSG['944'] = "Province missing";
-$MSG['945'] = "El país es obligatorio";
-$MSG['946'] = "El código postal es obligatorio";
-$MSG['947'] = "El teléfono es obligatorio";
-$MSG['948'] = "Date of birth missing or incomplete";
-$MSG['949'] = "Closes on ";
-$MSG['950'] = "%s bids";
-$MSG['951'] = "No Buy Now<br>for this item";
+$MSG['933'] = "Sólo ¡Cómpralo ya!"; //# "Buy Now Only"
+$MSG['934'] = "del usuario:"; //# "for user: "
+$MSG['935'] = "Balanza de Pagos"; //# 'Balance Payment'
 $MSG['1000'] = "Búsqueda de palabras clave o número de artículo";
 $MSG['1001'] = "Buscar Título <b>y</b> Descripción";
 $MSG['1002'] = "Buscar en Categorías";
@@ -1011,104 +1012,177 @@ $MSG['1017'] = "Precios más Bajos Primero";
 $MSG['1018'] = "Precios más Altos Primero";
 $MSG['1020'] = "Subasta Holandesa";
 $MSG['1021'] = "Subasta Estándar";
-$MSG['1022'] = "Soporte para SSL";
-$MSG['1023'] = "Activar el soporte SSL?";
-$MSG['1024'] = "<p>Si usted tiene soporte para SSL en el servidor donde se ejecuta WeBid, puedes dar a sus clientes un entorno más seguro para operar.</p><p>Una vez que el soporte SSL está activado, los usuarios podrán acogerse a las transacciones seguras HTTPS cuando ingresar o registrarse.</p>";
-$MSG['1025'] = "Configuración de SSL actualizado";
-$MSG['1028'] = "Países actualizados";
-$MSG['1029'] = "Contadores actualizados";
+$MSG['1022'] = "Soporte para SSL"; //# SSL Support
+$MSG['1023'] = "Activar el soporte SSL?"; //# Activate SSL support?
+$MSG['1024'] = "<p>Si usted tiene soporte para SSL en el servidor donde se ejecuta WeBid, puedes dar a sus clientes un entorno más seguro para operar.</p><p>Una vez que el soporte SSL está activado, los usuarios podrán acogerse a las transacciones seguras HTTPS cuando ingresar o registrarse.</p>"; //# If you have SSL support on the server where you are running WeBid, you may want to give your customers a safer enviroment to operate.</p><p>Once The SSL Support is activated, your users will operate under secure HTTPS transactions when they log in or register.</p>
+$MSG['1025'] = "Configuración de SSL actualizado"; //# SSL settings updated
+$MSG['1028'] = "Países actualizados"; //# "Counteries updated"
+$MSG['1029'] = "Contadores actualizados"; //# Counters updated
 $MSG['1030'] = "Utilidad de Actualización de Contadores";
 $MSG['1031'] = "Comenzando actualización de contadores...";
-$MSG['1032'] = "no existe ganador";
+$MSG['1032'] = "no existe ganador"; //# no winner
 
-// Invoices & tax system
-$MSG['1033'] = 'Packing Slip';
-$MSG['1034'] = 'Subasta ID';
-$MSG['1035'] = 'Order/Invoice';
-$MSG['1036'] = 'Order Date';
-$MSG['1037'] = 'BUYER';
+// Las facturas y sistema tributario
+$MSG['1033'] = 'Albarán';
+$MSG['1034'] = 'ID de subasta';
+$MSG['1035'] = 'Pedido/Factura';
+$MSG['1036'] = 'Fecha de pedido';
+$MSG['1037'] = 'comprador';
 $MSG['1038'] = 'SHIP TO';
-$MSG['1039'] = 'Datos de la Factura';
-$MSG['1040'] = 'Order Details';
-$MSG['1041'] = 'Numero de Factura';
-$MSG['1042'] = 'Order ID:';
-$MSG['1043'] = 'Invoice Date:';
-$MSG['1044'] = 'Product';
-$MSG['1045'] = 'Tax';
-$MSG['1046'] = 'Unit Price (excl.)';
-$MSG['1047'] = 'Unit Price (incl.)';
+$MSG['1039'] = 'Información de factura';
+$MSG['1040'] = 'Los detalles del pedido';
+$MSG['1041'] = 'La factura nº';
+$MSG['1042'] = 'ID de orden:';
+$MSG['1043'] = 'Fecha de factura:';
+$MSG['1044'] = 'Producto';
+$MSG['1045'] = 'Impuestos';
+$MSG['1046'] = 'Precio unitario (excl.)';
+$MSG['1047'] = 'Precio unitario (incl.)';
 $MSG['1048'] = 'Total (excl.)';
 $MSG['1049'] = 'Total (incl.)';
-$MSG['1050'] = 'Sub-Total:';
-$MSG['1051'] = 'UK Shipping:';
-$MSG['1052'] = 'VAT 20%:';
+$MSG['1050'] = 'SUB-Total:';
+$MSG['1051'] = 'Envíos:';
+$MSG['1052'] = 'IVA 20%:';
 $MSG['1053'] = 'Total:';
-$MSG['1054'] = 'Método de envío';
-$MSG['1055'] = 'Método de pago';
-$MSG['1056'] = 'You need to select an order to print a Packing Slip.';
-$MSG['1057'] = 'List invoices';
-$MSG['1058'] = 'Ver Factura';
-$MSG['1059'] = 'Invoice List';
-$MSG['1060'] = 'Invalid Invoice.';
+$MSG['1054'] = 'El método de envío';
+$MSG['1055'] = 'Pago';
+$MSG['1056'] = 'Necesita seleccionar una para imprimir un albarán.';
+$MSG['1057'] = 'Lista facturas';
+$MSG['1058'] = 'Ver factura';
+$MSG['1059'] = 'Lista de factura';
+$MSG['1060'] = 'Invalid factura.';
+$MSG['1060a'] = 'Imprimir esta Página';
 
 // admin general
 $MSG['1061'] = 'Notas';
 
-// admin help page
-$MSG['1062'] = 'Get Support';
-$MSG['1063'] = 'Support forums';
-$MSG['1064'] = 'If you any problems or questions head over our great support forum and get help from one of our many active users.';
-$MSG['1065'] = 'Online documentation';
-$MSG['1066'] = 'Unsure of how something works or where something is check out WeBids online documentation';
-$MSG['1067'] = 'Commonly Asked Questions and Their Solutions';
-$MSG['1068'] = 'Modify WeBid';
-$MSG['1069'] = 'Download Themes';
-$MSG['1070'] = 'Browse the large collection of user submitted themes that can instantly spruce up any site';
-$MSG['1071'] = 'Download Mods';
-$MSG['1072'] = 'Browse the large collection of user submitted mods that can add or almost anything to get your site working just how you want it to';
-$MSG['1073'] = 'Download Language Pack';
-$MSG['1074'] = 'Browse the collection of user submitted translations';
-$MSG['1075'] = 'Support WeBid';
-$MSG['1076'] = 'Submit a bug';
-$MSG['1077'] = 'Found something functioning funny? Tell us about it, it will help others out too';
-$MSG['1078'] = 'Suggest a feature';
-$MSG['1079'] = 'Got a great idea of what could improve WeBid tell us about it we alwayss want good ideas';
-$MSG['1080'] = 'Haz una donacion';
-$MSG['1081'] = 'Help keep us online and keep future developments coming';
+// La página de ayuda de administración
+$MSG['1062'] = 'Obtener soporte';
+$MSG['1063'] = 'foros de soporte';
+$MSG['1064'] = 'Si usted algún problema o duda sobre la cabeza de nuestro gran foro de soporte y obtener ayuda de uno de nuestros muchos usuarios activos.';
+$MSG['1065'] = 'documentación en línea';
+$MSG['1066'] = 'No está seguro de cómo funciona algo o algo donde es visita WeBids de documentación en línea';
+$MSG['1067'] = 'Preguntas comunes y sus soluciones';
+$MSG['1068'] = 'modificar webid';
+$MSG['1069'] = 'Descargar temas';
+$MSG['1070'] = 'Navegar por la colección extensa variedad de temas enviados por el usuario que podrá enriquecer instantáneamente cualquier sitio';
+$MSG['1071'] = 'descargar Mods';
+$MSG['1072'] = 'Navegar por la extensa colección de mods del usuario enviado Eso puede añadir el oro casi cualquier cosa para conseguir su sitio de trabajo, así como le desea que se';
+$MSG['1073'] = 'Descargar paquete de idioma';
+$MSG['1074'] = 'Navegar por la colección de traducciones de usuario Enviado';
+$MSG['1075'] = 'Soporte webid';
+$MSG['1076'] = 'Enviar un error';
+$MSG['1077'] = 'Encontrado funcionamiento divertido algo? Háblenos de él, que le ayudará a cabo otros también';
+$MSG['1078'] = 'Sugiere una función';
+$MSG['1079'] = 'Tiene una gran idea de lo que podría mejorar webid? Hablarnos de ello estamos siempre en busca de buenas ideas';
+$MSG['1080'] = 'donar';
+$MSG['1081'] = 'Nos ayude a mantener en línea y futuros desarrollos siguen llegando';
 
-// tax admin
-$MSG['1082'] = 'Nombre del Impuesto';
-$MSG['1083'] = 'Tarifas de Impuestos';
-$MSG['1084'] = 'Vendedores de';
-$MSG['1085'] = 'Compradores de';
-$MSG['1086'] = 'Impuesto del Sitio WeBid';
-$MSG['1087'] = 'Estas seguro que deseas borrar esta tarifa de impuestos';
-$MSG['1088'] = 'Ajustes de Impuestos';
-$MSG['1089'] = 'Configuracion de Impuestos Actualizada';
-$MSG['1090'] = 'Tax Enabled';
-$MSG['1091'] = 'Global setting to enable or disable tax';
-$MSG['1092'] = 'Users can charge tax';
-$MSG['1093'] = 'Enable to give users an option to tax their items';
+// la administración tributaria
+$MSG['1082'] = 'Nombre de impuestos';
+$MSG['1083'] = 'tasas tributarias';
+$MSG['1084'] = 'Sellers desde';
+$MSG['1085'] = 'Compradores';
+$MSG['1086'] = 'Site impuestos';
+$MSG['1087'] = 'Está seguro que desea eliminar este tipo impositivo';
+$MSG['1088'] = 'Ajustes fiscales';
+$MSG['1089'] = 'ajustes fiscales actualizado';
+$MSG['1090'] = 'Activado Fiscal';
+$MSG['1091'] = 'Configuración global para habilitar o deshabilitar impuestos';
+$MSG['1092'] = 'Los usuarios pueden cargar impuestos';
+$MSG['1093'] = 'Enable para dar a los usuarios la opción de gravar a sus propios elementos';
 
-// admin invoice settings
-$MSG['1094'] = 'Ajustes de Facturacion';
-$MSG['1095'] = 'Invoice settings updated';
-$MSG['1096'] = 'Invoice Notice';
-$MSG['1097'] = 'This will show in a yellow box above the end message on users invoices';
-$MSG['1098'] = 'Invoice End Message';
-$MSG['1099'] = 'This will show at the end of every users invoice';
+// admin configuración factura
+$MSG['1094'] = 'Ajustes de factura';
+$MSG['1095'] = 'Factura configuración actualizada';
+$MSG['1096'] = 'Factura Aviso';
+$MSG['1097'] = 'Esta se mostrará en un cuadro amarillo por encima del mensaje final sobre las facturas de los usuarios';
+$MSG['1098'] = 'Factura Mensaje final';
+$MSG['1099'] = 'Esta opción aparecerá en la Los usuarios finales de cada factura';
 
-// list admin users
-$MSG['1100'] = 'You cannot delete the account you are currently logged in from';
-$MSG['1101'] = 'Admin accounts deleted';
+// Lista de usuarios admin
+$MSG['1100'] = 'No se puede eliminar la cuenta ha iniciado sesión desde';
+$MSG['1101'] = 'Admin eliminado cuentas';
 
-// sell.php tax
-$MSG['1102'] = 'Agregar IVA';
-$MSG['1103'] = 'Incluir IVA en el precio final';
+// sell.php
+$MSG['1102'] = 'cobrar impuestos';
+$MSG['1103'] = 'incluyen los impuestos en el precio de venta final';
 
-$MSG['1104'] = 'Add to balance';
-$MSG['1105'] = 'Select the images you wish to delete <strong>(This cannot be undone)</strong>';
+$MSG['1104'] = 'Agregar al equilibrio';
+$MSG['1105'] = 'Seleccionar las imágenes que desea eliminar <strong>(no se puede deshacer)</strong>';
+$MSG['1106'] = 'Imprimir albarán';
 
+$MSG['1107'] = 'El artículo no se ha enviado';
+$MSG['1108'] = 'Set como recibido';
+$MSG['1109'] = 'elemento recibido';
+
+$MSG['1110'] = 'Política de Cookies';
+$MSG['1111'] = "Activar cookies La página política?";
+$MSG['1112'] = "Active esta opción si desea un cookies Política de enlace que aparezca en el pie de las páginas.";
+$MSG['1113'] = "Cookies contenido político<br>(HTML permitido)";
+$MSG['1114'] = "Cookies la página Política";
+$MSG['1115'] = "Actualice la configuración de la Política de Cookies";
+$MSG['1116'] = 'Set como enviado';
+$MSG['1117'] = 'Scuatro aguas';
+
+// email Configuración
+$MSG['1118'] = 'Email Configuración';
+$MSG['1119'] = 'Mail Protocolo:';
+$MSG['1120'] = 'Webid Mail Parámetros:';
+$MSG['1121'] = '*Cuando se utiliza \'Webid Mail\', additional mail Se pueden agregar parámetros aquí (e.g. "-femail@yourwebid.com").';
+$MSG['1122'] = 'SMTP Host:';
+$MSG['1123'] = '*For Las cuentas de Gmail. Establecer el sistema de cifrado mediante un prefijo de [<b>ssl://</b>] or [<b>tls://</b>] Ejemplos:<br>[ ssl://smtp.googlemail.com ], [ tls://smtp.googlemail.com ]';
+$MSG['1124'] = 'SMTP Nombre de usuario:';
+$MSG['1125'] = 'SMTP Contraseña:';
+$MSG['1126'] = 'SMTP Puerto:';
+$MSG['1127'] = 'SMTP La seguridad:';
+$MSG['1128'] = 'SMTP Autentificación';
+$MSG['1129'] = 'Admin adicionales E-Mails:';
+$MSG['1130'] = 'Cuentas de correo electrónico adicionales que desea recibir correo electrónico relacionadas con la administración, además del sitio principal de la dirección de correo electrónico %s (Separados por comas)';
+$MSG['1131'] = 'Email Configuración';
+$MSG['1132'] = 'Introduzca faltante o incorrecto SMTP Configuración';
+$MSG['1133'] = "SMTP Opciones específicas:";
+
+// modal y js
+$MSG['1134'] = "prueba de correo electrónico y respuestas";
+$MSG['1135'] = "Introduzca un mensaje de correo electrónico de prueba.";
+$MSG['1136'] = "Enviar email de prueba";
+$MSG['1137'] = "prueba de correo electrónico";
+$MSG['1138'] = "prueba de correo electrónico de administrador";
+$MSG['1139'] = "Admin";
+$MSG['1140'] = "he terminado de probar";
+$MSG['1141'] = 'utilizado <b>sólo</b> para correo SMTP';
+
+// tarifa
+$MSG['1142'] = "Antes de poder establecer las tarifas debe configurar al menos una cuenta donde los honorarios pueden ser pagados, para hacerlo simplemente añadir su información de pago en los correspondientes cuadros de abajo";
+$MSG['1143'] = 'Aquí puede configurar pasarelas de pago que desea permitir a los usuarios utilizar.';
+$MSG['1144'] = "Antes de que usted pueda establecer tarifas necesita de configurar al menos un método de pago. Esto puede hacerlo a través de <a href=\"fee_gateways.php\">Pasarelas de pago</a>";
+
+// yourauctions pages
+$MSG['1145'] = "<p>Se han eliminado correctamente %s subasta(s)</p>";
+$MSG['1146'] = "<p>Has vuelto a poner en venta %s subasta(s)</p>";
+$MSG['1147'] = "<p>Has vendido %s subasta(s)</p>";
+$MSG['1148'] = "<p>Un suplemento de %s ha sido hecho a tu cuenta</p>";
+$MSG['1149'] = "<p>Se han cerrado correctamente %s subasta(s)</p>";
+$MSG['1150'] = "<p>Se han iniciado con éxito %s subasta(s)</p>";
+$MSG['edit_disabled'] = "Editar desactivada, el artículo ha recibido pujas";
+$MSG['delete_auction_disabled'] = "Eliminar Minusválidos, artículo ha recibido pujas";
+$MSG['no_bids'] = "No hay pujas";
+$MSG['click_to_edit_auction'] = "Haga clic en Editar esta subasta.";
+
+// Vender artículo página
+$MSG['1151'] = "cuota de subasta";
+$MSG['1152'] = "libre";
+
+$MSG['1153'] = 'Imprimir factura';
+
+//mensajes de Sandbox para el AdminCP
+$MSG['1154'] = 'puede activar las pasarelas de pago sandbox para probar las pasarelas de pago pero asegúrese de deshabilitar el modo de recinto de seguridad antes de hacer su sitio en vivo';
+$MSG['1155'] = "sandbox de pasarela de pago.";
+
+$MSG['5000'] = 'debe iniciar sesión para ver esta página';
+$MSG['5001'] = "Ver sitio";
+$MSG['5002'] = "Usted debe estar registrado para pujar";
 $MSG['5003'] = "Configuración del Sitio";
 $MSG['5004'] = "Configuración Monedas";
 $MSG['5005'] = "Ajustes Generales de Diseño";
@@ -1141,7 +1215,7 @@ $MSG['5038'] = "Activo";
 $MSG['5039'] = "Inactivo";
 $MSG['5040'] = "NOTA: borrando un foro borrará todos los mensajes asociados.";
 $MSG['5043'] = "# MSGS";
-$MSG['5044'] = "Foros seleccionados borrados";
+$MSG['5044'] = "Foros seleccionados borrados"; //# Selected boards removed
 $MSG['5046'] = "MOSTRAR";
 $MSG['5047'] = "Ajustes Foros";
 $MSG['5048'] = "Activar Servicio Foros?";
@@ -1178,15 +1252,15 @@ $MSG['5083'] = "Contenido página Términos & Condiciones<br>(HTML permitido)";
 $MSG['5084'] = "Ajustes Términos & Condiciones Actualizados";
 $MSG['5085'] = "Acerca de Nosotros";
 $MSG['5086'] = "Términos & Condiciones";
-$MSG['5087'] = "Configuración de subastas";
-$MSG['5088'] = "Configuración de la subasta actualizada";
-$MSG['5089'] = "Usuarios pueden establecer una fecha de inicio personalizada para subastas";
-$MSG['5090'] = "Permite Fecha de Inicio Personalizada?";
-$MSG['5091'] = "Cuenta atrás hasta fin de la subasta";
+$MSG['5087'] = "Configuración de subastas"; //# Auction Settings
+$MSG['5088'] = "Configuración de la subasta actualizada"; //# Auction Settings Updated
+$MSG['5089'] = "Usuarios pueden establecer una fecha de inicio personalizada para subastas"; //# Users can set a custom start date for auctions
+$MSG['5090'] = "Permite Fecha de Inicio Personalizada?"; //# Allow custom start date?
+$MSG['5091'] = "Cuenta atrás hasta fin de la subasta"; //# Hours until auction ends count-down
 $MSG['5092'] = "Buscar Subasta";
 $MSG['5093'] = "Título, Descripción";
 $MSG['5094'] = "Ver&nbsp;subastas";
-$MSG['5095'] = "Las horas restantes en una subasta hasta que el tiempo restante se convierte en un temporizador de cuenta atrás";
+$MSG['5095'] = "Las horas restantes en una subasta hasta que el tiempo restante se convierte en un temporizador de cuenta atrás"; //# Hours remaining on an auction until the time remaining becomes an automatic countdown timer
 $MSG['5113'] = "Cambiar";
 $MSG['5115'] = "días";
 $MSG['5117'] = "Página";
@@ -1246,7 +1320,7 @@ $MSG['5228'] = "Mostrar Logo Página Inicio?";
 $MSG['5230'] = "Categorías FAQs";
 $MSG['5231'] = "Nueva FAQ";
 $MSG['5232'] = "Gestionar FAQs";
-$MSG['5233'] = "Otros Ajustes";
+$MSG['5233'] = "Otros Ajustes"; //# Other Settings
 $MSG['5234'] = "Insertar Nueva Categoría";
 $MSG['5235'] = "<b>Nota</b>: solo categorías sin FAQs pueden ser borradas.";
 $MSG['5236'] = "FAQs";
@@ -1261,20 +1335,19 @@ $MSG['5245'] = "Superior";
 $MSG['5276'] = "Borrar Mensaje";
 $MSG['5277'] = "Volver a la Lista Mensajes";
 $MSG['5278'] = "Editar Mensaje";
-$MSG['5279'] = "Back to the user list";
 $MSG['5280'] = "Años/Meses";
-$MSG['5281'] = "Informe Mensual";
+$MSG['5281'] = "Informe Mensual"; //# Monthly Report
 $MSG['5282'] = "Ver mes actual";
 $MSG['5283'] = "Editar Categoría FAQs";
 $MSG['5284'] = "Nombre Categoría";
-$MSG['5285'] = "Informe Diário";
+$MSG['5285'] = "Informe Diário"; //# Daily Report
 $MSG['5291'] = "Usuarios activos";
 $MSG['5292'] = "Cuenta nunca confirmada";
 $MSG['5293'] = "Cuota de registro no pagada";
 $MSG['5294'] = "Suspendido por el administrador";
 $MSG['5295'] = "Ver";
 $MSG['5296'] = "Todos los usuarios";
-$MSG['5297'] = "Balance sobre el límite de la deuda";
+$MSG['5297'] = "Balance sobre el límite de la deuda"; //# Balance over debt limit
 $MSG['5299'] = "Limitar envío a";
 $MSG['5300'] = " mensajes enviados.";
 $MSG['5318'] = "Ver Estadísticas Plataforma";
@@ -1290,7 +1363,7 @@ $MSG['5493'] = "puja";
 $MSG['5494'] = "puja por ";
 $MSG['5495'] = "para cada ";
 $MSG['5506'] = "Comentario positivo: ";
-$MSG['5507'] = '<span style="color:#CD0000;">Comentario negativo: </span>';
+$MSG['5507'] = "<span style=\"color:#CD0000;\">Comentario negativo: </span>";
 $MSG['5508'] = "Miembro desde ";
 $MSG['5509'] = "Comentarios veces ";
 $MSG['_0001'] = "Página en Mantenimiento";
@@ -1299,6 +1372,7 @@ $MSG['_0004'] = "En Mantenimiento HTML code";
 $MSG['_0005'] = "Ajustes En Mantenimiento actualizados";
 $MSG['_0006'] = "Cambiar sitio a modo \"En Mantenimiento\"?";
 $MSG['_0008'] = "Administración Banners";
+$MSG['_0009'] = "";
 $MSG['_0010'] = "BANNERS";
 $MSG['_0012'] = "Gestión Usuarios";
 $MSG['_0014'] = "El sistema de banners de WeBid los recupera al azar desde la base de datos, después de aplicar los filtros establecidos cuando se insertó el banner.<br>Lo primero que hay que configurar es el tamaño de banner que se utilizará:";
@@ -1348,7 +1422,7 @@ $MSG['_0056'] = "Nuevo banner";
 $MSG['_0148'] = "Volver a incluir subasta";
 $MSG['_0151'] = " veces";
 $MSG['_0153'] = "Re-incluir / <br>Re-incluido";
-$MSG['_0161'] = "Reventa Automática";
+$MSG['_0161'] = "Reventa Automática"; //# Automatic Relists
 $MSG['_0162'] = "Tú puedes elegir automáticamente Volver a incluir la subasta, si no se han publicado pujas. <br>Introduce el número de veces que deseas que la subasta se vuelva a incluir (introducir cero o deja en blanco si no deseas que reventa automática se aplique a la subasta).<br><font color='red'>Máximo número de reventas automáticas permitido: ";
 $MSG['_0163'] = "Ganadores";
 
@@ -1357,8 +1431,8 @@ $MSG['2_0005'] = "Registrar IP";
 $MSG['2_0006'] = "Banear";
 $MSG['2_0007'] = "Aceptar";
 $MSG['2_0009'] = "Dirección IP";
-$MSG['2_0012'] = '<span style="color:#A2CD5A;font-weight:bold">Aceptada</span>';
-$MSG['2_0013'] = '<span style="color:#CD0000;font-weight:bold">Baneada></span>';
+$MSG['2_0012'] = "<span style=\"color:#A2CD5A;font-weight:bold\">Aceptada</span>";
+$MSG['2_0013'] = "<span style=\"color:#CD0000;font-weight:bold\">Baneada></span>";
 $MSG['2_0015'] = "Procesar Selección";
 $MSG['2_0017'] = "Direcciones IP";
 $MSG['2_0020'] = "Gestión Dirrecciones IP Baneadas";
@@ -1366,43 +1440,40 @@ $MSG['2_0021'] = "Banear esta dirección IP : ";
 $MSG['2_0024'] = "(Completar dirección IP - ejemplo: 185.39.51.63)";
 $MSG['2_0025'] = "Introducida manualmente";
 $MSG['2_0026'] = "Lo sentimos pero, por una o más razones, te ha sido denegado el acceso a este sitio.<br>Si tenías alguna subasta activa listada, hemos cancelado todas las pujas y eliminado el(los) artículo(s) de nuestra base de datos.<br><br>Gracias";
-$MSG['2_0027'] = "Su direccion IP ha sido baneada";
+$MSG['2_0027'] = "Su direccion IP ha sido baneada"; //# Your IP has been banned
 $MSG['2_0032'] = "Configuración Extensión Subasta";
 $MSG['2_0034'] = "Habilitar Autoextensión Subastas?";
 $MSG['2_0035'] = "Extender subasta por ";
 $MSG['2_0036'] = " segundos si alguien puja durante los últimos ";
 $MSG['2_0037'] = " segundos";
 $MSG['2_0038'] = "Por favor introduce valores numéricos válidos";
-$MSG['2_0039'] = "Auctions Auto extension gives you the ability to automatically extend by <b>X</b> seconds the auctions end time,
-				if someone bids in the last <b>Y</b> seconds of the auction lifetime.<br>";
 $MSG['2__0001'] = "Elegir idioma";
-$MSG['2__0002'] = "Soporte multilingual";
-$MSG['2__0003'] = "<br>The default language is English.<br>
-				If you want to enable multilingual support or change the default language you must follow the steps below:
-				<ul>
-				<li>If you want to add a new language make a duplicate of language/EN and name it with the
-				appropriate name: i.e. if you are translating to French you will need to name the directory FR
-				<br>
-				The first thing is to define the characters encoding your language requires at the top of the messages file.
-				The variable you must edit is <i>\$CHARSET</i>. UTF-8 encoding should work with almost all the languages.<br>
-				Next you'll have to define the document reading direction. The variable to modify is <i>\$DOCDIR</i>
-				and can have two possible values:
-				<ul>
-				<li><b>ltr</b> (left-to-right): this is the default and means the text must be read from left to right
-				<li><b>rtl</b> (right-to-left): means the text must be read from right to left (i.e. Arabian, Hebrew, etc)
-				</ul>
-				Once changed <i>\$CHARSET</i> and <i>\$DOCDIR</i> according to the language you are translating into,
-				 you will have to translate all the error messages and user interface messages contained in the messages file.
-				
-				<li>You will then need the flag(s) GIFs for the languages you are going to use, in the inc/flags directory. 
-				Get the flag(s) you need and change the file name(s) to be XX.gif, where XX is the language code for your country language.
-				<br>Copy the renamed flag file(s) in the inc/flags/ directory.
-				<br><b>Note:</b> for each translation, you need the corresponding XX.gif file in inc/flags/
-				<li>Select the default language below. All the other available languages will be available in the home page (the corresponding flags will be shown).
-				</ul>
-				";
+$MSG['2__0002'] = "Soporte multilingual"; //# Multilingual support
+$MSG['2__0003'] = "<br>El idioma por defecto es inglés.<br>
+Si quieres habilitar el soporte multiling&uuml;e o cambiar el idioma por defecto debe seguir los pasos siguientes:
+<ul>
+<li>Si quieres añadir un nuevo idioma haz un duplicado de language/EN y nómbrelo con el nombre apropiado: es decir, si está traduciendo a francés necesitará renombrar el directorio a FR
+<br>
+La primera cosa es definir la codificación de caracteres que tu idioma requiere al comienzo del archivo messages.
+La variable que debes editar es <span style=\"font-family:monospace\">\$CHARSET</span>. La codificación UTF-8 encoding debería funcionar con casi todos los idiomas.<br>
+En el siguiente tendrás que definir la dirección de lectura del documento. La variable a modificar es <span style=\"font-family:monospace\">\$DOCDIR</span>
+y puedes tener dos valores posibles:
+<ul>
+<li><b>ltr</b> (left-to-right): este es por defecto y significa que el texto debe ser leído de izquierda a derecha
+<li><b>rtl</b> (right-to-left): significa que el texto debe ser leído de derecha a izquierda (i.e. Arabe, Hebreo, etc)
+</ul>
+Una vez cambiado <span style=\"font-family:monospace\">\$CHARSET</span> y <span style=\"font-family:monospace\">\$DOCDIR</span> de acuerdo al idioma al que está traduciendo,
+ tendrás que traducir todos los mensajes de error y los mensajes de interfície del usuario en el archivo messages.
+
+<li>Entonces necesitarás los GIFs de banderas para los idiomas que vayas a usar, en el directorio includes/flags. 
+Coge la(s) bandera(s) que necesites y cambia el nombre al archivo para que sea XX.gif, donde XX es el código de idioma para tu país.
+<br>Copiar el(los) archivo(s) de banderas en el directorio includes/flags/.
+<br><b>Nota:</b> para cada traducción, necesitas el correspondiente archivo XX.gif en includes/flags/
+<li>Selecciona el idioma por defecto a continuación. Todos los otros idiomas estarán disponibles en la página de inicio (las correspondientes banderas se mostrarán).
+</ul>
+";
 $MSG['2__0004'] = "Idioma por defecto";
-$MSG['2__0005'] = '<span style="color:#CD0000;font-weight:bold">Idioma por defecto actual</span>';
+$MSG['2__0005'] = "<span style=\"color:#CD0000;font-weight:bold\">Idioma por defecto actual</span>";
 $MSG['2__0016'] = "Fecha de comienzo";
 $MSG['2__0025'] = "¡Compralo Ya!";
 $MSG['2__0027'] = "Todo";
@@ -1412,49 +1483,43 @@ $MSG['2__0030'] = " significa que la entrada no se puede eliminar porque está e
 $MSG['2__0031'] = "¿Estás seguro de que deseas eliminar estos mensajes?";
 $MSG['2__0037'] = "Enviar subasta";
 $MSG['2__0038'] = "Selecciona tu categoría";
-$MSG['2__0039'] = "Si perdiste tu contraseña, por favor, introduce tu nombre de usuario y tu dirección de e-mail.";
-$MSG['2__0041'] = "Selecciona categoría secondaria";
+$MSG['2__0039'] = "Si perdiste tu contraseña, por favor, introduce tu nombre de usuario o dirección de e-mail.";
+$MSG['2__0040'] = "Nombre de usuario o dirección de e-mail";
+$MSG['2__0041'] = "Selecciona categoría secondaria"; //# Select secondary category
 $MSG['2__0045'] = " pixels ";
 $MSG['2__0047'] = "SELECCIONAR CATEGORÍA &gt;&gt;";
 $MSG['2__0048'] = "Cerrar Ahora!";
-$MSG['2__0050'] = "Vender otro igual";
-$MSG['2__0051'] = "Revender";
-$MSG['2__0054'] = '<span style="#CD0000;"><b>Already selected</b></span>';
+$MSG['2__0050'] = "Comprar similar";
+$MSG['2__0051'] = "Revender"; //# Relist
+$MSG['2__0054'] = "<span style=\"color:#CD0000;font-weight:bold\">Ya seleccionados</span>";
 $MSG['2__0056'] = "Subastas suspendidas";
 $MSG['2__0057'] = "Mostrar contadores";
-$MSG['2__0058'] = "You can decide to show some counters in the header of your site's pages.<br>
-				There are three different counters available:
-				<ul>
-				<li>Active auctions</li>
-				<li>Registered users</li>
-				<li>Online users</li>
-				</ul>
-				You can enable/disable each counter below";
-$MSG['2__0059'] = "Usuarios en línea";
+$MSG['2__0058'] = "Puedes decidir mostrar algunos contadores en la cabecera de las páginas de tu sitio. <br>Hay tres diferentes contadores disponibles:<ul><li>Subastas activas<li>Usuarios registrados<li>Usuarios conectados</ul>Puedes activar o desactivar cada contador siguiente";
+$MSG['2__0059'] = "Usuarios conectados";
 $MSG['2__0060'] = "Subastas activas";
 $MSG['2__0061'] = "Usuarios registrados";
-$MSG['2__0062'] = "Counters you want to show";
-$MSG['2__0063'] = "Counters Settings Updated";
+$MSG['2__0062'] = "Contadores que deseas mostrar";
+$MSG['2__0063'] = "Ajustes Contadores Actualizados";
 $MSG['2__0064'] = "USUARIOS CONECTADOS";
-$MSG['2__0066'] = "Enabled";
-$MSG['2__0067'] = "Disabled";
+$MSG['2__0066'] = "Activar";
+$MSG['2__0067'] = "Desactivar";
 $MSG['25_0001'] = "GANADOR";
 $MSG['25_0002'] = "VENDEDOR";
 $MSG['25_0004'] = "Nombre usuario";
-$MSG['25_0005'] = 'Campos de Registro de Usuario';
+$MSG['25_0005'] = "Campos de Registro de Usuario"; //# 'User Registration Fields'
 $MSG['25_0006'] = "Puja final";
 $MSG['25_0008'] = "Preferencias";
 $MSG['25_0009'] = "Interfíce";
 $MSG['25_0010'] = "Usuarios";
 $MSG['25_0011'] = "Publicidad";
-$MSG['25_0012'] = "Tarifas";
+$MSG['25_0012'] = "Tarifas"; //# Fees
 $MSG['25_0015'] = "Enviar Newsletter";
 $MSG['25_0018'] = "Contenidos";
 $MSG['25_0023'] = "Estadísticas";
 $MSG['25_0025'] = "Estado Instalación";
-$MSG['25_0026'] = "Proceso Batch (cron.php)";
+$MSG['25_0026'] = "Proceso Batch (cron.php)"; //# Batch Process (cron.php)
 $MSG['25_0027'] = "Asegúrate de crear un cronjob para correr cron.php periódicamente (15 minutos por lo general es un buen intervalo de tiempo).";
-$MSG['25_0031'] = "Estadísticas";
+$MSG['25_0031'] = "Estadísticas"; //# Statistics
 $MSG['25_0032'] = " minutos";
 $MSG['25_0033'] = " segundos";
 $MSG['25_0035'] = "Corrección Hora";
@@ -1463,8 +1528,8 @@ $MSG['25_0037'] = " horas";
 $MSG['25_0038'] = "Contadores mostrados en la cabecera:<br>";
 $MSG['25_0040'] = "Alineamiento Páginas";
 $MSG['25_0041'] = "Mostrado en Página Inicio";
-$MSG['25_0042'] = "Caja de Ingreso";
-$MSG['25_0043'] = "Caja de Noticias";
+$MSG['25_0042'] = "Caja de Ingreso"; //# Login Box
+$MSG['25_0043'] = "Caja de Noticias"; //# News Box
 $MSG['25_0044'] = "Noticias Mostradas";
 $MSG['25_0045'] = "Ancho Miniaturas";
 $MSG['25_0048'] = "Otras miniaturas: ";
@@ -1481,13 +1546,13 @@ $MSG['25_0076'] = "Reenviar E-mail";
 $MSG['25_0077'] = "HTML no permitido";
 $MSG['25_0078'] = "E-mail enviado a ";
 $MSG['25_0079'] = "Newsletter";
-$MSG['25_0080'] = "Resumen";
+$MSG['25_0080'] = "Resumen"; //# Summary
 $MSG['25_0081'] = "Mi Cuenta";
 $MSG['25_0082'] = "Vendiendo";
 $MSG['25_0083'] = "Comprando";
 $MSG['25_0084'] = "Añadir un nuevo artículo de palabras clave";
 $MSG['25_0085'] = "Recordarme";
-$MSG['25_0086'] = "Al hacer clic en el botón abajo, usted se compromete a pagar el completo <b id=\"bidcost\">%s</b> por lo tanto a comprar el artículo al vendedor si usted sea el ganador de la subasta";
+$MSG['25_0086'] = "Al hacer clic en el botón abajo, usted se compromete a pagar el completo <b id=\"bidcost\">%s</b> por lo tanto a comprar el artículo al vendedor si usted sea el ganador de la subasta"; //# By clicking the button below, you commit to pay the full <b id=\"bidcost\">%s</b> thus buying the item from the seller if you are the winning bidder
 $MSG['25_0087'] = "Etás fuera de la puja";
 $MSG['25_0088'] = "Actualmente eres el máximo pujador";
 $MSG['25_0089'] = "Felicidades, los artículos son tuyos. Por favor pagar ahora";
@@ -1562,63 +1627,35 @@ $MSG['25_0218'] = "Cualquier visitante puede contactar con el vendedor (la capac
 $MSG['25_0219'] = "Sólo los usuarios conectados pueden contactar con el vendedor (la capacidad para contactar con el vendedor será mostrada solo a otros usuarios de tu sitio si están conectados)";
 $MSG['25_0220'] = "Nadie puede contactar con el vendedor (la capacidad para contactar con el vendedor será NUNCA mostrada)";
 $MSG['25_0223'] = "Comentario que has recibido";
-$MSG['25_0224'] = "Preview";
 
-// multi-language months
-$MSG['MON_001'] = "Ene";
-$MSG['MON_001E'] = "Enero";
-$MSG['MON_002'] = "Feb";
-$MSG['MON_002E'] = "Febrero";
-$MSG['MON_003'] = "Mar";
-$MSG['MON_003E'] = "Marzo";
-$MSG['MON_004'] = "Abr";
-$MSG['MON_004E'] = "Abril";
-$MSG['MON_005'] = "May";
-$MSG['MON_005E'] = "Mayo";
-$MSG['MON_006'] = "Jun";
-$MSG['MON_006E'] = "Junio";
-$MSG['MON_007'] = "Jul";
-$MSG['MON_007E'] = "Julio";
-$MSG['MON_008'] = "Ago";
-$MSG['MON_008E'] = "Agosto";
-$MSG['MON_009'] = "Sep";
-$MSG['MON_009E'] = "Septiembre";
-$MSG['MON_010'] = "Oct";
-$MSG['MON_010E'] = "Octubre";
-$MSG['MON_011'] = "Nov";
-$MSG['MON_011E'] = "Noviembre";
-$MSG['MON_012'] = "Dic";
-$MSG['MON_012E'] = "Diciembre";
+//multi-language months
+$MSG['MON_001']="Ene";
+$MSG['MON_001E']="Enero";
+$MSG['MON_002']="Feb";
+$MSG['MON_002E']="Febrero";
+$MSG['MON_003']="Mar";
+$MSG['MON_003E']="Marzo";
+$MSG['MON_004']="Abr";
+$MSG['MON_004E']="Abril";
+$MSG['MON_005']="May";
+$MSG['MON_005E']="Mayo";
+$MSG['MON_006']="Jun";
+$MSG['MON_006E']="Junio";
+$MSG['MON_007']="Jul";
+$MSG['MON_007E']="Julio";
+$MSG['MON_008']="Ago";
+$MSG['MON_008E']="Agosto";
+$MSG['MON_009']="Sep";
+$MSG['MON_009E']="Septiembre";
+$MSG['MON_010']="Oct";
+$MSG['MON_010E']="Octubre";
+$MSG['MON_011']="Nov";
+$MSG['MON_011E']="Noviembre";
+$MSG['MON_012']="Dic";
+$MSG['MON_012E']="Diciembre";
 
-//time zones
-$MSG['TZ_12'] = '(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka';
-$MSG['TZ_11'] = '(GMT +11:00) Magadan, Solomon Islands, New Caledonia';
-$MSG['TZ_10'] = '(GMT +10:00) Eastern Australia, Guam, Vladivostok';
-$MSG['TZ_9'] = '(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk';
-$MSG['TZ_8'] = '(GMT +8:00) Beijing, Perth, Singapore, Hong Kong';
-$MSG['TZ_7'] = '(GMT +7:00) Bangkok, Hanoi, Jakarta';
-$MSG['TZ_6'] = '(GMT +6:00) Almaty, Dhaka, Colombo';
-$MSG['TZ_5'] = '(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent';
-$MSG['TZ_4'] = '(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi';
-$MSG['TZ_3'] = '(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg';
-$MSG['TZ_2'] = '(GMT +2:00) Kaliningrad, South Africa';
-$MSG['TZ_1'] = '(GMT +1:00) Brussels, Copenhagen, Madrid, Paris';
-$MSG['TZ_-12'] = '(GMT -12:00) Eniwetok, Kwajalein';
-$MSG['TZ_-11'] = '(GMT -11:00) Midway Island, Samoa';
-$MSG['TZ_-10'] = '(GMT -10:00) Hawaii';
-$MSG['TZ_-9'] = '(GMT -9:00) Alaska';
-$MSG['TZ_-8'] = '(GMT -8:00) Pacific Time (US &amp; Canada)';
-$MSG['TZ_-7'] = '(GMT -7:00) Mountain Time (US &amp; Canada)';
-$MSG['TZ_-6'] = '(GMT -6:00) Central Time (US &amp; Canada), Mexico City';
-$MSG['TZ_-5'] = '(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima';
-$MSG['TZ_-4'] = '(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz';
-$MSG['TZ_-3'] = '(GMT -3:00) Brazil, Buenos Aires, Georgetown';
-$MSG['TZ_-2'] = '(GMT -2:00) Mid-Atlantic';
-$MSG['TZ_-1'] = '(GMT -1:00) Azores, Cape Verde Islands';
-$MSG['TZ_0'] = '(GMT) Western Europe Time, London, Lisbon, Casablanca';
-
-$MSG['26_0000'] = "Establecer como predeterminado";
 $MSG['26_0001'] = "Usar por defecto";
+$MSG['26_0001'] = "Historial pujas";
 $MSG['26_0002'] = "Organizar temas";
 $MSG['26_0003'] = "Editar archivos de temas";
 $MSG['26_0004'] = "Adicionar archivos de temas";
@@ -1626,8 +1663,11 @@ $MSG['26_0005'] = "Tema Estándar Actualizado";
 $MSG['30_0029'] = "Puedes fijar a continuación el número de categorías que deseas que se muestren en la columna de la izquierda de la página de inicio";
 $MSG['30_0030'] = "Categorías a mostrar: ";
 $MSG['30_0031'] = "Limpiar Caché";
+$MSG['30_0031a'] = "caché de imagen Clear";
 $MSG['30_0032'] = "Eliminar todos los archivos de caché de la plantilla, tendrás que hacer esto cada vez que se edita un archivo de plantilla";
+$MSG['30_0032a'] = "elimina todos los archivos de la memoria caché de imagen, esto puede ayudar si hay algunas imágenes no se muestra en el sitio";
 $MSG['30_0033'] = "Caché limpiada";
+$MSG['30_0033a'] = "borrado la caché de imagen";
 $MSG['30_0049'] = "Ajustes Newsletter Actualizados";
 $MSG['30_0053'] = "<p>Algunos servicios de correo electrónico gratuitos han sido prohibidos desde este sitio web. Por favor, no escribas las direcciones de correo electrónico pertenecientes a los siguientes dominios:</p>";
 $MSG['30_0055'] = "La newsletter enviada a través de WeBid será enviada automaticamente en <b>HTML</b>, así, es necesario agregar un tag <code>&lt;BR&gt;</code> para cada nueva línea que vaya a añadir. En caso contrario, el mensaje parecerá en una sola línea de texto sin formato.";
@@ -1661,11 +1701,128 @@ $MSG['30_0210'] = "*Cuando los artículos relativos a estas palabras clave sean 
 $MSG['30_0211'] = "Estás ejecutando una versión antigua puedes descargar la última versión desde <a href='http://sourceforge.net/project/showfiles.php?group_id=181393'>aquí</a>";
 $MSG['30_0212'] = "Estás ejecutando la última versión";
 $MSG['30_0213'] = "No necesitas dejar comentarios";
-$MSG['30_0214'] = "Version del sistema WeBid";
-$MSG['30_0110'] = "Envío";
+$MSG['30_0214'] = "Versión WeBid";
+$MSG['30_0215'] = "Cargar logotipo";
+$MSG['upload_failed'] = 'Upload failed';
+$MSG['30_0110'] = "Envíos";
 $MSG['350_1004'] = "Cantidad";
-$MSG['350_1008'] = "Additional Shipping";
-$MSG['350_1009'] = "Additional Shipping Cost";
-$MSG['RPT_22'] = 'User ID'; 
-$MSG['RPT_23'] = '(leave blank for all)';
+$MSG['350_1008'] = "Gastos de envío adicionales";
+$MSG['350_1009'] = "Los gastos de envío adicionales";
+$MSG['RPT_22'] = 'ID de usuario';
+$MSG['RPT_23'] = '(Déjelo en blanco para todos)';
+$MSG['email_settings_updated'] = 'Actualice la configuración de correo electrónico';
+
+$MSG['NAY_01'] = "Elementos destacados";
+$MSG['NAY_02'] = "Todos los Elementos";
+$MSG['NAY_03'] = "Tema del sitio";
+$MSG['NAY_04'] = "Admin del tema.";
+
+$MSG['AUCTIONS_401'] = "Oferta";
+$MSG['AUCTIONS_402'] = "Ofertas";
+$MSG['AUCTIONS_404'] = "Vendido";
+$MSG['AUCTIONS_405'] = "Puja ganadora";
+$MSG['AUCTIONS_406'] = "Ganadores";
+
+$MSG['BUY_NOW_ONLY_TPL_0100'] = "Informe de subastas cerradas recientemente";
+		
+$MSG['auction_has_been_reported'] = "Esta subasta ha informado";
+$MSG['item_report_captcha_type'] = "Captcha escriba sobre el tema página de informe";
+$MSG['report_this_item'] = "Informe este tema";
+$MSG['view_reported_auctions'] = "Ver informó de subastas";
+$MSG['report_item'] = "elemento de informe";
+$MSG['reason_for_report'] = "razón";
+$MSG['report_reason_select'] = "Seleccione un motivo";
+$MSG['report_reason_copy'] = "Copia de tu anuncio";
+$MSG['report_reason_counterfeit'] = "Las falsificaciones y las violaciones del derecho de autor";
+$MSG['report_reason_prohibited'] = "Prohibido (prohibido) los elementos";
+$MSG['report_reason_terms_and_conditions'] = "listado de violaciones de políticas";
+$MSG['report_reason_stolen'] = "robados";
+
+$MSG['multilingual_support_settings_updated'] = 'multilingüe admiten configuración actualizada';
+
+$MSG['communative_report_winner_yes'] = "se ha enviado un correo electrónico a cualquier ganador(s) con su dirección de correo electrónico.";
+$MSG['communative_report_winner_no'] = 'Lo siento, ningún ganador de subasta(s) en este momento.';
+
+// usergroups.php
+$MSG['cannot_delete_default_user_groups'] = "Default Grupos de usuarios (los vendedores &amp Compradores) no puede ser retirado";
+$MSG['user_group_deleted'] = 'Usuario Grupo eliminado';
+$MSG['user_group_name_empty_update'] = 'Nombre de grupo no puede estar vacío. Grupo de usuarios no estaba actualizado';
+$MSG['user_group_name_empty_new'] = 'Nombre de grupo no puede estar vacío. El nuevo grupo de usuarios no fue creado';
+$MSG['text_unknown'] = "Desconocido";
+$MSG['empty_line'] = '-----';
+$MSG['error_no_user_group'] = 'No se ha asignado a ningún grupo de usuarios';
+$MSG['error_no_user_group_id'] = 'se le ha asignado un ID de grupo que no existe más';
+$MSG['text_update_users_group'] = '[Por favor ver y actualizar detalles de cada usuario\'s]';
+$MSG['warning'] = 'Advertencia';
+
+$MSG['bidding_visable_to_guest'] = 'Comprar ahora visible para los huéspedes';
+$MSG['bidding_visable_to_guest_explain'] = 'Los huéspedes pueden ver la Puja ahora/opción Comprar ahora al ver una subasta, esto debería estar desactivado si planea ejecutar un solo vendedor sitio';
+$MSG['email_admin_on_signup'] = 'Email Admin en signup';
+$MSG['email_admin_on_signup_explain'] = 'Admin recibe un correo electrónico cada vez que un nuevo usuario se registra';
+$MSG['user_request_seller_permission'] 	= "Los usuarios pueden solicitar ser vendedores";
+$MSG['user_request_seller_permission_explain'] = "Los usuarios que no tienen permiso para vender artículos pueden solicitar para obtener el permiso";
+$MSG['spam_blocked_email_enabled'] = 'Activar dominios de correo electrónico bloque';
+$MSG['spam_blocked_email_domains'] = "Denegar el registro de correos electrónicos desechables";
+$MSG['spam_blocked_email_domains_explain'] = 'poner cada dominio en una línea nueva';
+$MSG['spam_blocked_email_domains_register_error'] = 'La dirección de correo electrónico introducida ha sido que figuran en la lista negra';
+
+$MSG['wordfilter_banned_username'] = 'Por favor, seleccione un nombre de usuario diferente como nuestra palabra filtro no permitirá que este nombre se utilice';
+
+$MSG['custom_end_time'] = 'Set hora de finalización personalizada';
+$MSG['or_custom_end_time'] = 'o establecer una hora de finalización personalizada';
+$MSG['ending_date'] = 'Fecha de finalización';
+
+$MSG['allow_custom_end_date_explain'] = "Los usuarios pueden configurar de forma personalizada el <b>Finalizar</b> fecha para subastas";
+$MSG['allow_custom_end_date'] = "Permitir Fecha de finalización personalizada";
+
+$MSG['payment_name'] = 'Nombre';
+$MSG['clean_payment_name'] = 'Limpiar Nombre <pequeños>(en minúsculas sin espacios ni caracteres especiales)</small>';
+
+$MSG['all_user_groups'] = 'Todos los grupos de usuarios';
+$MSG['login_required_text'] = "Login requerido";
+$MSG['end_date'] = 'Fecha de finalización';
+$MSG['delete'] = 'delete';
+
+$MSG['all_error_messages'] = 'Todos los errores';
+$MSG['unique_error_messages'] = 'errores exclusivo';
+
+$MSG['google_analytics'] = "Google Analytics";
+$MSG['google_analytics_updated'] = "Google Analytics configuración actualizada";
+$MSG['google_analytics_tracking_code'] = "Código de seguimiento de Google Analytics";
+$MSG['google_analytics_tracking_code_hint']	= "Copia y pega el código de seguimiento de Google Analytics aquí. Debe incluir la apertura y cierre &lt;script&gt;&lt;/script&gt; tags.";
+
+$MSG['any_country'] = "Cualquier país";
+		
+$MSG['new_currency'] = 'Agregar nueva moneda';
+$MSG['currency_name'] = "Nombre de moneda";
+$MSG['curreny_symbol'] = "Símbolo de moneda";
+$MSG['curreny_country_explain'] = "Ejemplo: <b>Estados Unidos</B><br>Debe rellenar todos los 3 textboxs para agregar una nueva moneda.";
+$MSG['curreny_name_explain'] = "Ejemplo: <b>U.S. Dollar</b>";
+$MSG['curreny_symbol_explain'] = "Ejemplo: <b>USD</b>";
+		
+$MSG['prune_unactivated_users'] = "podar los usuarios desactivada";
+$MSG['prune_unactivated_users_explain'] = "eliminar automáticamente las cuentas de usuario desactivada.";
+		
+$MSG['prune_unactivated_users_days'] = "Número de días antes de eliminar cuentas desactivadas";
+$MSG['prune_unactivated_users_days_explain'] = "Número de días antes de eliminar cuentas desactivadas.";
+
+$MSG['moderation_settings'] = 'Maplicación Settings';
+$MSG['moderation_disabled'] = 'Disabled';
+$MSG['moderation_pre_moderation'] = 'Pre-moderación';
+$MSG['moderation_post_moderation'] = 'Post-moderación';
+
+$MSG['auction_moderation'] = 'Moderación de subastas';
+$MSG['new_auction_moderation'] = 'Nueva subasta moderación';
+
+$MSG['moderation_settings_updated'] = "Moderación ajustes actualizados";
+
+$MSG['moderation'] = "Aplicación";
+$MSG['moderate_auctions'] = "Comedido subastas";
+$MSG['moderation_queue'] = 'Maplicación cola';
+
+$MSG['moderator_dismiss'] = 'Dismiss';
+$MSG['remove_auction_from_moderation'] = "Retirar la subasta de moderación";
+$MSG['remove_auction_from_moderation_explain'] = "Está seguro que desea eliminar esta subasta de la cola de moderación?<br>Esta acción no va a reactivar la subasta.";
+
+$MSG['auction_awaiting_approval'] = "Tu subasta está pendiente de aprobación.";
 ?>
