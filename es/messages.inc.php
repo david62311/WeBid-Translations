@@ -922,7 +922,7 @@ $MSG['016_b'] = "Ahora puede iniciar sesión con su nombre de usuario y la contr
 $MSG['860'] = '<p>En el ínterin, he aquí algunos consejos que le ayudarán a empezar con ' . $system->SETTINGS['sitename'] . '.</p>
 <ul>
 <li>Tienen fotos listo cuando un listado de un elemento para vender, reducir el tamaño de archivo para ahorrar tiempo al cargar.</li>
-<li>subastas destacados son mucho más propensos a vender, la subasta será de forma aleatoria en la portada ' . $Sistema->Configuración['sitename'] . ' página de inicio.</li>
+<li>subastas destacados son mucho más propensos a vender, la subasta será de forma aleatoria en la portada ' . $system->SETTINGS['sitename'] . ' página de inicio.</li>
 </ul>';
 $MSG['861'] = 'Buscar artículos';
 $MSG['862'] = 'Login para continuar';
